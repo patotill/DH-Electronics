@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="/css/design2.css">
+<link rel="stylesheet" href="/css/app.css">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="index.php"><i class="fab fa-digital-ocean"></i></a>
     <a class="navbar-brand" href="index.php"> DH Electronics </a>
 
@@ -19,14 +19,14 @@
           <a class="nav-link" href="faq.php">Preguntas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.php">Ingresar</a>
+          <a class="nav-link" href=login> Ingresar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="register.php" tabindex="-1" aria-disabled="true">Registrarse</a>
+          <a class="nav-link" href=register tabindex="-1" aria-disabled="true">Registrarse</a>
         </li>
       </ul>
     </div>
-  </nav>
+  </nav> --}}
 
   <!-- Segunda Tabla -->
    <nav class="navbar navbar2 navbar-expand-lg navbar-light bg-light justify-content-around">

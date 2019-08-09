@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Hola pavote
+                    Hola pato
                 </div>
 
                 <div class="links">

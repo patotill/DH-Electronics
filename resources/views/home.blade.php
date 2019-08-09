@@ -1,21 +1,13 @@
-<?php
-
-//DESLOGUEA - DESTRUYE SESION Y COOKIE - REDIRIGE
- session_start();
- session_destroy();
-
- setcookie("username", null, -1);
-
- //require_once("header.php");
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="/css/design2.css">
+{{--   @include('partials.header') --}}
+@extends('layouts.app')
+@section('content')
+  <link rel="stylesheet" href="/css/app.css">
   <!-- FONT AWESOME -->
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -164,11 +156,9 @@
 </main>
 
 </body>
-
+@endsection
 <!-- INCLUYO EL FOOTER -->
-<?php
-  //include ("footer.blade.php");
-?>
+ 
 
 
 <!-- jQuery - Popper.js - JavaScript plugins -->
