@@ -62,7 +62,7 @@ body {
     margin-bottom: 20px;
   }
 
-  .login-container input[type="text"], .login-container input[type="password"] {
+  .login-container input[type="email"], .login-container input[type="password"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;

@@ -47,7 +47,7 @@
           <a class="nav-link" href="{{ url('/') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url('faq') }}">Preguntas</a>
+          <a class="nav-link" href="{{ url('/faq') }}">Preguntas</a>
         </li>
         <!-- Authentication Links -->
         @guest
