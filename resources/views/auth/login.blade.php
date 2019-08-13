@@ -1,8 +1,11 @@
 @extends('layouts.app')
-@section('content')
-<link rel="stylesheet" href="/css/styles-login.css">
 
-<div class="container">
+@section('customStyles')
+<link rel="stylesheet" href="/css/styles-login.css">
+@endsection
+
+@section('content')
+
   <div class="login-container">
     <p style="text-align: center;"><i class="fab fa-digital-ocean"></i></p>
     <h1>Bienvenido a DH Electronics</h1>
@@ -44,5 +47,5 @@
         @endif
     </form>
   </div>
-</div>
+
 @endsection

@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+
 
  <footer style="bottom: 0;
                 width: 100%;
@@ -17,6 +16,5 @@
     </div>
   </div>
  </footer>
-</html>
 
 

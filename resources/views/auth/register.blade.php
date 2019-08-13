@@ -1,6 +1,11 @@
 @extends('layouts.app')
-@section('content')
+
+@section('customStyles')
 <link rel="stylesheet" href="/css/styles-register.css">
+@endsection
+
+@section('content')
+
 
 <!-- Registro -->
 <div class="register-container">
@@ -21,16 +26,6 @@
           <strong>{{ $message }}</strong>
         </span>
        @enderror
-
-       <!-- USERNAME -->
-      <label for="username">Nombre de usuario</label>
-      <input id="username" type="text" name="username" class="form-control @error('username') is-invalid @enderror"  value="{{ old('username') }}" required autocomplete="username">
-
-      @error('username')
-        <span class="invalid-feedback" role="alert">
-          <strong>{{ $message }}</strong>
-        </span>
-      @enderror
 
       <!-- EMAIL -->
       <label for="email">Correo electrónico</label>
