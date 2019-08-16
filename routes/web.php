@@ -17,6 +17,24 @@ Route::get('/', function () {
 Route::get('/faq', function () {
     return view('faq');
 });
+Route::get('/fotografia', function () {
+    return view('fotografia');
+});
+Route::get('/tv', function () {
+    return view('tv');
+});
+Route::get('/accesorios', function () {
+    return view('accesorios');
+});
+Route::get('/audio', function () {
+    return view('audio');
+});
+Route::get('/mobile', function () {
+    return view('mobile');
+});
+Route::get('/computadoras', function () {
+    return view('computadoras');
+});
 
 
 Auth::routes();

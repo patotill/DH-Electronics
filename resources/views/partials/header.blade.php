@@ -2,7 +2,7 @@
 <html>
 <link rel="stylesheet" href="/css/app.css">
 
-{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="index.php"><i class="fab fa-digital-ocean"></i></a>
     <a class="navbar-brand" href="index.php"> DH Electronics </a>
 
@@ -53,7 +53,7 @@
          <a class="nav-link" href="#">TV & Entretenimiento</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="products.php">Nuestros productos</a>
+         <a class="nav-link" href="products.php">Accesorios</a>
        </li>
 
      </ul>

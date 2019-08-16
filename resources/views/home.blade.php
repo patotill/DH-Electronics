@@ -76,7 +76,7 @@
     <div class="pro my-3 p-3 justify-content ">
       <img src="/images/Fotografia.jpg" class="img-fluid w-50 h-50" alt="fotografia">
       <br><br>
-      <button type="button" class="btn btn-outline-secondary">Fotografía</button>
+      <button type="button" class="btn btn-outline-secondary" href ="{{ url('/fotografia') }}">Fotografía</button>
     </div>
   </div>
 
@@ -116,7 +116,7 @@
 
   <div class="pro bg-inherit mr-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center overflow-hidden">
     <div class="pro my-3 p-3">
-      <img src="/images/DellCompu.jpg" class="img-fluid w-50 h-50" alt="compu">
+      <img src="/images/fotosDH/lenovo_.jpg" class="img-fluid w-50 h-50" alt="compu">
       <br><br>
       <button type="button" class="btn btn-outline-secondary">Computadoras</button>
     </div>
@@ -124,7 +124,7 @@
 
   <div class="pro bg-inherit mr-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center overflow-hidden">
     <div class="pro my-3 py-3">
-      <img src="/images/SamsungTV.jpg" class="img-fluid w-50 h-50" alt="TV">
+      <img src="/images/fotosDH/samsung_.jpg" class="img-fluid w-50 h-50" alt="TV">
       <br><br>
       <button type="button" class="btn btn-outline-secondary">TV & Entretenimiento</button>
     </div>
@@ -137,6 +137,3 @@
 
 @endsection
 <!-- INCLUYO EL FOOTER -->
-
-
-

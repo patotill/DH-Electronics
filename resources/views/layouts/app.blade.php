@@ -8,13 +8,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield("title")</title>  
+    <title>@yield("title")</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-  
+
   <!-- FONT AWESOME -->
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -28,7 +28,7 @@
 
   <!--custom-styles-->
   @yield("customStyles")
-  
+
 </head>
 
 <body>
@@ -94,22 +94,22 @@
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto align-items-center">
        <li class="nav-item">
-         <a class="nav-link" href="#">Fotografía</a>
+         <a class="nav-link" href="{{ url('/fotografia') }}">Fotografía</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">Computadoras</a>
+         <a class="nav-link" href="{{ url('/compus') }}">Computadoras</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">Audio</a>
+         <a class="nav-link" href="{{ url('/audio') }}">Audio</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">Mobile</a>
+         <a class="nav-link" href="{{ url('/mobile') }}">Mobile</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">TV & Entretenimiento</a>
+         <a class="nav-link" href="{{ url('/tv') }}">TV & Entretenimiento</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="products.php">Nuestros productos</a>
+         <a class="nav-link" href="{{ url('/accesorios') }}">Accesorios</a>
        </li>
 
      </ul>
@@ -143,7 +143,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-  
+
 
 </body>
 
