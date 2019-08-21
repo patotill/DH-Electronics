@@ -10,12 +10,7 @@
     <div class="fotos">
       <img src="/images/fotosDH/nikon_d850.jpg" class="img-fluid rounded w-50 h-50" alt="parlante">
       <br><p>Nikon D850</p>
-      <p>45.7MP FX-Format BSI CMOS Sensor
-      <br>EXPEED 5 Image Processor
-      <br>3.2" 2.36m-Dot Tilting Touchscreen LCD
-      <br>4K UHD Video Recording at 30 fps</p>
-
-      <button style= "width: auto; border-radius: 20px; font-size: 12px;" type="button" class="btn btn-outline-secondary" href="{{ url('/fotografia') }}">Comprar</button>
+      <button style= "width: auto; border-radius: 20px; font-size: 12px;" type="button" class="btn btn-outline-secondary"><span style="font-size: 15px">Comprar</span></button>
     </div>
   </div>
   <div class="col-md-3 text-center overflow-hidden">

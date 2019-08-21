@@ -76,7 +76,8 @@
     <div class="pro my-3 p-3 justify-content ">
       <img src="/images/Fotografia.jpg" class="img-fluid w-50 h-50" alt="fotografia">
       <br><br>
-      <button type="button" class="btn btn-outline-secondary" href ="{{ url('/fotografia') }}">Fotografía</button>
+      <!-- <button type="button" class="btn btn-outline-secondary"><span style="font-size: 15px">Fotografia</span></button> -->
+      <a class="btn btn-outline-secondary" href="{{ url('/fotografia') }}">Fotografía</a>
     </div>
   </div>
 
