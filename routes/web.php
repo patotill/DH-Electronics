@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/faq', function () {
     return view('faq');
 });
+Route::get('/dron', function () {
+    return view('dron');
+});
 Route::get('/fotografia', function () {
     return view('fotografia');
 });
@@ -32,8 +35,11 @@ Route::get('/audio', function () {
 Route::get('/mobile', function () {
     return view('mobile');
 });
-Route::get('/computadoras', function () {
-    return view('computadoras');
+Route::get('/compus', function () {
+    return view('compus');
+});
+Route::get('/gaming', function () {
+    return view('gaming');
 });
 
 

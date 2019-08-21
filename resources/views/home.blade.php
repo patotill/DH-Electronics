@@ -20,7 +20,7 @@
           <div class="carousel-caption text-left">
             <h1>Speaker Bose waterproof</h1>
             <p> Parlantes</p>
-            <p><a class="btn btn-lg btn-outline-info" href="#" role="button">Ver más</a></p>
+            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/audio') }}" role="button">Ver más</a></p>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
           <div class="carousel-caption text-left">
             <h1>Prueba - 2</h1>
             <p> Parlantes</p>
-            <p><a class="btn btn-lg btn-outline-info" href="#" role="button">Ver más</a></p>
+            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/audio') }}" role="button">Ver más</a></p>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
           <div class="carousel-caption text-left">
             <h1>Prueba - 3</h1>
             <p> Parlantes</p>
-            <p><a class="btn btn-lg btn-outline-info" href="#" role="button">Ver más</a></p>
+            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/audio') }}" role="button">Ver más</a></p>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@
     <div class="my-3 py-3">
       <img src="/images/BoseSPeaker.jpeg" class="img-fluid w-50 h-50" alt="imagen">
       <br><br>
-      <button type="button" class="btn btn-outline-secondary">Parlantes</button>
+        <a class="btn btn-outline-secondary" href="{{ url('/audio') }}">Parlantes</a>
     </div>
   </div>
 
@@ -76,12 +76,7 @@
     <div class="pro my-3 p-3 justify-content ">
       <img src="/images/Fotografia.jpg" class="img-fluid w-50 h-50" alt="fotografia">
       <br><br>
-<<<<<<< HEAD
-      <!-- <button type="button" class="btn btn-outline-secondary"><span style="font-size: 15px">Fotografia</span></button> -->
       <a class="btn btn-outline-secondary" href="{{ url('/fotografia') }}">Fotografía</a>
-=======
-      <a href ="{{ url('/fotografia') }}" class="btn btn-outline-secondary">Fotografía</a>
->>>>>>> e983ed1c44fc215ca7dcead97cc3bcaa7dd0aee1
     </div>
   </div>
 
@@ -89,7 +84,7 @@
     <div class="pro my-3 p-3">
       <img src="/images/dron.jpg" class="img-fluid w-50 h-50 " alt="dron">
       <br><br>
-      <button type="button" class="btn btn-outline-secondary">Drones & VideoCamaras</button>
+        <a class="btn btn-outline-secondary" href="{{ url('/dron') }}">Drones & VideoCamaras</a>
     </div>
   </div>
 
@@ -97,7 +92,7 @@
     <div class="pro my-3 py-3">
       <img src="/images/iphone.jpeg" class="img-fluid w-50 h-50" alt="celulares">
       <br><br>
-      <button type="button" class="btn btn-outline-secondary">Celulares</button>
+          <a class="btn btn-outline-secondary" href="{{ url('/mobile') }}">Celulares</a>
     </div>
   </div>
 </div>
@@ -107,7 +102,7 @@
     <div class="pro my-3 p-3">
       <img src="/images/nintendo.jpg" class="img-fluid w-50 h-50" alt="dron">
       <br><br>
-      <button type="button" class="btn btn-outline-secondary">Gaming</button>
+      <a class="btn btn-outline-secondary" href="{{ url('/gaming') }}">Gaming</a>
     </div>
   </div>
 
@@ -115,7 +110,7 @@
     <div class="pro my-3 py-3">
       <img src="/images/Accesorios.jpeg" class="img-fluid w-50 h-50" alt="celulares">
       <br><br>
-      <button type="button" class="btn btn-outline-secondary">Accesorios</button>
+      <a class="btn btn-outline-secondary" href="{{ url('/accesorios') }}">Accesorios</a>
     </div>
   </div>
 
@@ -123,7 +118,7 @@
     <div class="pro my-3 p-3">
       <img src="/images/fotosDH/lenovo_.jpg" class="img-fluid w-50 h-50" alt="compu">
       <br><br>
-      <button type="button" class="btn btn-outline-secondary">Computadoras</button>
+      <a class="btn btn-outline-secondary" href="{{ url('/compus') }}">Computadoras</a>
     </div>
   </div>
 
@@ -131,7 +126,7 @@
     <div class="pro my-3 py-3">
       <img src="/images/fotosDH/samsung_.jpg" class="img-fluid w-50 h-50" alt="TV">
       <br><br>
-      <button type="button" class="btn btn-outline-secondary">TV & Entretenimiento</button>
+        <a class="btn btn-outline-secondary" href="{{ url('/tv') }}">Televisores</a>
     </div>
   </div>
 </div>

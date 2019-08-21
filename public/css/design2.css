@@ -5,6 +5,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+
 html, body {
   height: 100%;
 }
@@ -153,3 +154,13 @@ footer {
   }
 
   /*---------------- Fin estilos de las faqs!! -------------------*/
+/* productos */
+
+.contItems {
+  border-style:solid;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px 0px;
+  margin: 15px 20px;
+  box-shadow: 0 0 0 1px #26bbae;
+}
