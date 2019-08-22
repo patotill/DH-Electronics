@@ -15,7 +15,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/images/Boseagua.jpg" class="d-block w-100 h-100" alt="Bose">
+        <img src="/images/Boseagua.jpg" class="d-block w-100 h-80" alt="Bose">
         <div class="containerCarousel">
           <div class="carousel-caption text-left">
             <h1>Speaker Bose waterproof</h1>
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/images/Boseagua.jpg" class="d-block w-100 h-100" alt="Bose">
+        <img src="/images/Boseagua.jpg" class="d-block w-100 h-80" alt="Bose">
         <div class="containerCarousel">
           <div class="carousel-caption text-left">
             <h1>Prueba - 2</h1>
@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/images/celulares-2019.jpg" class="d-block w-100 h-100" alt="BoseSPeaker">
+        <img src="/images/celulares-2019.jpg" class="d-bloITEck w-100 h-80" alt="BoseSPeaker">
         <div class="containerCarousel">
           <div class="carousel-caption text-left">
             <h1>Prueba - 3</h1>
@@ -66,7 +66,7 @@
 
   <div class="pro bg-inherit mr-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center text-white overflow-hidden">
     <div class="my-3 py-3">
-      <img src="/images/BoseSPeaker.jpeg" class="img-fluid w-50 h-50" alt="imagen">
+      <img src="/images/BoseSPeaker.jpeg" class="img-fluid w-50 h-50" alt="audio">
       <br><br>
         <a class="btn btn-outline-secondary" href="{{ url('/audio') }}">Parlantes</a>
     </div>
@@ -82,9 +82,9 @@
 
   <div class="pro bg-inherit mr-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center overflow-hidden">
     <div class="pro my-3 p-3">
-      <img src="/images/dron.jpg" class="img-fluid w-50 h-50 " alt="dron">
+      <img src="/images/dron.jpg" class="img-fluid w-50 h-50 " alt="fotografia">
       <br><br>
-        <a class="btn btn-outline-secondary" href="{{ url('/dron') }}">Drones & VideoCamaras</a>
+        <a class="btn btn-outline-secondary" href="{{ url('/fotografia') }}">Drones & VideoCamaras</a>
     </div>
   </div>
 
@@ -100,15 +100,15 @@
 <div class="pro d-md-flex flex-md-equal my-md-3 pl-md-3">
   <div class="pro bg-inherit mr-md-3 pt-4 px-3 pt-md-3 px-md-3 text-center overflow-hidden">
     <div class="pro my-3 p-3">
-      <img src="/images/nintendo.jpg" class="img-fluid w-50 h-50" alt="dron">
+      <img src="/images/nintendo.jpg" class="img-fluid w-50 h-50" alt="tv">
       <br><br>
-      <a class="btn btn-outline-secondary" href="{{ url('/gaming') }}">Gaming</a>
+      <a class="btn btn-outline-secondary" href="{{ url('/tv') }}">Gaming</a>
     </div>
   </div>
 
   <div class="pro bg-inherit mr-md-3 pt-3 px-3 pt-md-3 px-md-3 text-white text-center overflow-hidden">
     <div class="pro my-3 py-3">
-      <img src="/images/Accesorios.jpeg" class="img-fluid w-50 h-50" alt="celulares">
+      <img src="/images/Accesorios.jpeg" class="img-fluid w-50 h-50" alt="accesorios">
       <br><br>
       <a class="btn btn-outline-secondary" href="{{ url('/accesorios') }}">Accesorios</a>
     </div>

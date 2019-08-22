@@ -17,9 +17,6 @@ Route::get('/', function () {
 Route::get('/faq', function () {
     return view('faq');
 });
-Route::get('/dron', function () {
-    return view('dron');
-});
 Route::get('/fotografia', function () {
     return view('fotografia');
 });

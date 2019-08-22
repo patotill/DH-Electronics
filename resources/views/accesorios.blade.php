@@ -8,7 +8,7 @@
   <div class="img-zone col-md-4 text-center overflow-hidden">
     <div class="padding js-displayHoverImg">
       <a name="image" class="itemImg" href="#">
-        <img src="/images/fotosDH/nikon_d7500.jpg" class="img-fluid rounded w-50 h-50" alt="google">
+        <img src="/images/fotosDH/caseSamsung.jpg" class="img-fluid rounded w-50 h-50" alt="google">
       </a>
     </div>
   </div>
@@ -16,7 +16,7 @@
     <div class="desc_zone col-md-4 text-center overflow-hidden">
       <div class="itemHeader">
         <h3><a href="#" class="link">
-          <span itemprop="brand">Nikon D7500</span>
+          <span itemprop="brand">Funda para Samsung S10</span>
         </a></h3>
       </div>
       <div class="sect text-left">
@@ -42,7 +42,7 @@
 
     <div class="buy-zone col-md-4 text-center overflow-hidden">
     <!-- <br><br> -->
-    <div class="prices"><span class="price-you-pay bold">$22.500</span></div>
+    <div class="prices"><span class="price-you-pay bold">$1.000</span></div>
     <br>
     <div class="boton"><a class="btn" href="{{ url('/audio') }}">Agregar al carrito</a></div>
   </div>
@@ -53,7 +53,7 @@
   <div class="img-zone col-md-4 text-center overflow-hidden">
     <div class="padding js-displayHoverImg">
       <a name="image" class="itemImg" href="#">
-        <img src="/images/fotosDH/sony_alpha_a6400.jpg" class="img-fluid rounded w-50 h-50" alt="asus">
+        <img src="/images/fotosDH/soporteAuto.jpg" class="img-fluid rounded w-50 h-50" alt="asus">
       </a>
     </div>
   </div>
@@ -61,7 +61,7 @@
     <div class="desc_zone col-md-4 text-center overflow-hidden">
       <div class="itemHeader">
         <h3><a href="#" class="link">
-          <span itemprop="brand">Sony alplha a6400</span>
+          <span itemprop="brand">Soporte para el auto</span>
         </a></h3>
       </div>
       <div class="sect text-left">
@@ -90,7 +90,7 @@
     </div>
 
     <div class="buy-zone col-md-4 text-center overflow-hidden">
-    <div class="prices text-center"><span class="price-you-pay bold">$50.400</span></div>
+    <div class="prices text-center"><span class="price-you-pay bold">$1.400</span></div>
     <br>
     <div class="boton text-center"><a class="btn btn-outline-secondary" href="{{ url('/audio') }}">Agregar al carrito</a></div>
   </div>
@@ -101,7 +101,7 @@
   <div class="img-zone col-md-4 text-center overflow-hidden">
     <div class="padding js-displayHoverImg">
       <a name="image" class="itemImg" href="#">
-        <img src="/images/fotosDH/dji_mavic_2_pro.jpg" class="img-fluid rounded w-50 h-50" alt="asus">
+        <img src="/images/fotosDH/appleTV.jpg" class="img-fluid rounded w-50 h-50" alt="asus">
       </a>
     </div>
   </div>
@@ -109,7 +109,7 @@
     <div class="desc_zone col-md-4 text-center overflow-hidden">
       <div class="itemHeader">
         <h3><a href="#" class="link">
-          <span itemprop="brand">DJI Mavic 2 pro</span>
+          <span itemprop="brand">Apple TV 4ta generacion</span>
         </a></h3>
       </div>
       <a class="line"><i class="fal fa-horizontal-rule"></i></a>
@@ -132,7 +132,7 @@
     </div>
 
     <div class="buy-zone col-md-4 text-center overflow-hidden">
-    <div class="prices text-center"><span class="price-you-pay bold">$24.200</span></div>
+    <div class="prices text-center"><span class="price-you-pay bold">$11.200</span></div>
     <br>
     <div class="boton text-center"><a class="btn btn-outline-secondary" href="{{ url('/audio') }}">Agregar al carrito</a></div>
   </div>

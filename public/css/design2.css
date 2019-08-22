@@ -33,8 +33,8 @@ body {
 .navbar-light .btn-primary {
 	background-color: #f7f7f7;
   color: #26bbae;
-	 border-color: #f7f7f7;
-	 font-size: 20px;
+	border-color: #f7f7f7;
+	font-size: 20px;
 
 }
 .navbar-light .form-control  {
@@ -117,18 +117,17 @@ footer {
   /* Bump up size of carousel content */
   .carousel-caption p {
     margin-bottom: 1.25rem;
-    font-size: 30px;
-    line-height: 1;
+    font-size: 25px;
+    /* line-height: 1; */
 
   }
 
-.carousel .btn-primary{
+.carousel-item .btn{
+  color:white;
+  border-color: white;
+  font-size: 18px;
+}
 
-  background-color: inherit;
-  border-color: inherit;
-  font-size: 15px;
-}
-}
 
   /*---------------- Estilos de las faqs!! ----------------------------*/
   #accordionExample {
@@ -163,4 +162,21 @@ footer {
   padding: 10px 0px;
   margin: 15px 20px;
   box-shadow: 0 0 0 1px #26bbae;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contItems .boton .btn{
+border-color:rgb(249,161,97) ;
+color:rgb(249,161,97) ;
+}
+
+.desc-zone{
+  justify-content: center;
+  align-items: center;
+}
+.prices{
+  font-size: 25px;
+  font-weight: bold;
 }

@@ -8,7 +8,7 @@
   <div class="img-zone col-md-4 text-center overflow-hidden">
     <div class="padding js-displayHoverImg">
       <a name="image" class="itemImg" href="#">
-        <img src="/images/fotosDH/nikon_d7500.jpg" class="img-fluid rounded w-50 h-50" alt="google">
+        <img src="/images/fotosDH/google_pixel_3.jpg" class="img-fluid rounded w-50 h-50" alt="google">
       </a>
     </div>
   </div>
@@ -16,7 +16,7 @@
     <div class="desc_zone col-md-4 text-center overflow-hidden">
       <div class="itemHeader">
         <h3><a href="#" class="link">
-          <span itemprop="brand">Nikon D7500</span>
+          <span itemprop="brand">Google Pixel 3a smartphone</span>
         </a></h3>
       </div>
       <div class="sect text-left">
@@ -53,7 +53,7 @@
   <div class="img-zone col-md-4 text-center overflow-hidden">
     <div class="padding js-displayHoverImg">
       <a name="image" class="itemImg" href="#">
-        <img src="/images/fotosDH/sony_alpha_a6400.jpg" class="img-fluid rounded w-50 h-50" alt="asus">
+        <img src="/images/fotosDH/samsung10.jpg" class="img-fluid rounded w-50 h-50" alt="asus">
       </a>
     </div>
   </div>
@@ -61,7 +61,7 @@
     <div class="desc_zone col-md-4 text-center overflow-hidden">
       <div class="itemHeader">
         <h3><a href="#" class="link">
-          <span itemprop="brand">Sony alplha a6400</span>
+          <span itemprop="brand">Samsung Galaxy S10</span>
         </a></h3>
       </div>
       <div class="sect text-left">
@@ -101,7 +101,7 @@
   <div class="img-zone col-md-4 text-center overflow-hidden">
     <div class="padding js-displayHoverImg">
       <a name="image" class="itemImg" href="#">
-        <img src="/images/fotosDH/dji_mavic_2_pro.jpg" class="img-fluid rounded w-50 h-50" alt="asus">
+        <img src="/images/fotosDH/xiaomi.jpg" class="img-fluid rounded w-50 h-50" alt="asus">
       </a>
     </div>
   </div>
@@ -109,7 +109,7 @@
     <div class="desc_zone col-md-4 text-center overflow-hidden">
       <div class="itemHeader">
         <h3><a href="#" class="link">
-          <span itemprop="brand">DJI Mavic 2 pro</span>
+          <span itemprop="brand">Xiaomi Mi 9 Dual-SIM</span>
         </a></h3>
       </div>
       <a class="line"><i class="fal fa-horizontal-rule"></i></a>
