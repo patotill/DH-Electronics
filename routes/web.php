@@ -17,12 +17,13 @@ Route::get('/', function () {
 
 Route::get('/products', 'ProductsController@index');
 
+
 Route::get('/faq', function () {
     return view('faq');
 });
-Route::get('/fotografia', function () {
-    return view('fotografia');
-});
+
+Route::get('/categoria/{id}/{name}', 'ProductsController@category');
+
 Route::get('/tv', function () {
     return view('tv');
 });

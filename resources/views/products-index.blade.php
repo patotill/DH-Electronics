@@ -26,7 +26,9 @@
       </div>
       <a class="line"><i class="fal fa-horizontal-rule"></i></a>
       <div class="sect text-left">
-        {{ $product->category_id }}
+
+        {{ $product->category->name }}
+        
     </div>
 
     <div class="buy-zone col-md-4 text-center overflow-hidden">

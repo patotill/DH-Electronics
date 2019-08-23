@@ -94,7 +94,7 @@
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto align-items-center">
        <li class="nav-item">
-         <a class="nav-link" href="{{ url('/fotografia') }}">Fotografía</a>
+         <a class="nav-link" href="{{ url('/categoria/1/fotografia') }}">Fotografía</a>
        </li>
        <li class="nav-item">
          <a class="nav-link" href="{{ url('/compus') }}">Computadoras</a>
@@ -106,7 +106,7 @@
          <a class="nav-link" href="{{ url('/mobile') }}">Mobile</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="{{ url('/tv') }}">TV & Entretenimiento</a>
+         <a class="nav-link" href="{{ url('/categoria/2/tv') }}">TV & Entretenimiento</a>
        </li>
        <li class="nav-item">
          <a class="nav-link" href="{{ url('/accesorios') }}">Accesorios</a>
