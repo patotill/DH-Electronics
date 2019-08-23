@@ -2,13 +2,14 @@
 @section('title', "Productos")
 @section('content')
 
-<div class="containerProductos" id="containerProductos" style="">
+<div class="containerProductos" id="containerProductos">
 
-	<ul>
-@foreach ($products as $product)
+  <ul>
+
+@foreach ($productsByCategory as $product)
 
 
-		<!-- producto -->
+    <!-- producto -->
 <div class="contItems d-md-flex flex-md-equal">
   <div class="img-zone col-md-4 text-center overflow-hidden">
     <div class="padding js-displayHoverImg">
@@ -28,17 +29,17 @@
       <div class="sect text-left">
 
         {{ $product->category->name }}
-        
+
     </div>
 
     <div class="buy-zone col-md-4 text-center overflow-hidden">
     <div class="prices text-center"><span class="price-you-pay bold">{{ $product->price }}</span></div>
     <br>
-    <div class="boton text-center"><a class="btn btn-outline-secondary" href="{{ url('/audio') }}">Agregar al carrito</a></div>
+    <div class="boton text-center"><a class="btn btn-outline-secondary" href="{{ url('add-to-cart/'.$product->id) }}" role="button">Agregar al carrito</a></div>
   </div>
 </div>
 </div>
 
-		@endforeach
-	</ul>
+    @endforeach
+  </ul>
 @endsection

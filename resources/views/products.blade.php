@@ -4,12 +4,11 @@
 
 <div class="containerProductos" id="containerProductos" style="">
 
-  <ul>
-  
-@foreach ($productsByCategory as $product)
+	<ul>
+@foreach ($products as $product)
 
 
-    <!-- producto -->
+		<!-- producto -->
 <div class="contItems d-md-flex flex-md-equal">
   <div class="img-zone col-md-4 text-center overflow-hidden">
     <div class="padding js-displayHoverImg">
@@ -29,7 +28,7 @@
       <div class="sect text-left">
 
         {{ $product->category->name }}
-        
+
     </div>
 
     <div class="buy-zone col-md-4 text-center overflow-hidden">
@@ -40,6 +39,6 @@
 </div>
 </div>
 
-    @endforeach
-  </ul>
+		@endforeach
+	</ul>
 @endsection

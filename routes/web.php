@@ -24,25 +24,15 @@ Route::get('/faq', function () {
 
 Route::get('/categoria/{id}/{name}', 'ProductsController@category');
 
-Route::get('/tv', function () {
-    return view('tv');
-});
-Route::get('/accesorios', function () {
-    return view('accesorios');
-});
-Route::get('/audio', function () {
-    return view('audio');
-});
+
 Route::get('/mobile', function () {
     return view('mobile');
 });
-Route::get('/compus', function () {
-    return view('compus');
-});
-Route::get('/gaming', function () {
-    return view('gaming');
-});
 
+
+Route::get('cart', 'ProductsController@cart');
+
+Route::get('add-to-cart/{id}', 'ProductsController@addToCart');
 
 Auth::routes();
 

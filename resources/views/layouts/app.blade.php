@@ -121,9 +121,9 @@
        <button class="btn btn-primary my-2 my-sm-0 mr-1" type="submit">
          <i class="fas fa-search"></i>
        </button>
-       <button class="btn btn-primary my-2 my-sm-0 mx-2 d-sm-inline" type="submit">
-         <i class="fas fa-shopping-cart"></i>
-       </button>
+       <a href="{{ url ('/cart') }}">
+         <i class="fas fa-shopping-cart" ></i>
+       </a>
      </form>
   </div>
 </nav>
