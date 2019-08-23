@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/products', 'ProductsController@index');
+
 Route::get('/faq', function () {
     return view('faq');
 });
