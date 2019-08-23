@@ -97,19 +97,19 @@
          <a class="nav-link" href="{{ url('/categoria/1/fotografia') }}">Fotografía</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="{{ url('/compus') }}">Computadoras</a>
+         <a class="nav-link" href="{{ url('/categoria/2/computadoras') }}">Computadoras</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="{{ url('/audio') }}">Audio</a>
+         <a class="nav-link" href="{{ url('/categoria/3/audio') }}">Audio</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="{{ url('/mobile') }}">Mobile</a>
+         <a class="nav-link" href="{{ url('/categoria/4/mobile') }}">Mobile</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="{{ url('/categoria/2/tv') }}">TV & Entretenimiento</a>
+         <a class="nav-link" href="{{ url('/categoria/5/tv') }}">TV & Entretenimiento</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="{{ url('/accesorios') }}">Accesorios</a>
+         <a class="nav-link" href="{{ url('/categoria/6/accesorios') }}">Accesorios</a>
        </li>
 
      </ul>
