@@ -6,8 +6,8 @@
   <div class="card-footer text-muted position-absolute">
     <div class="row">
       <div class="col d-sm-12">
-        <a href=home><i class="fab fa-digital-ocean"></i></a>
-        <a class="textDH " href=home> DH Electronics </a>
+        <a href="{{ url('/') }}"><i class="fab fa-digital-ocean"></i></a>
+        <a class="textDH " href="{{ url('/') }}"> DH Electronics </a>
         <a class="logo" href="https://www.facebook.com"><i class="fab fa-facebook-square "></i></a>
         <a class= "logo" href="https://www.instagram.com"><i class="fab fa-instagram "></i></a>
       </div>
@@ -16,5 +16,3 @@
     </div>
   </div>
  </footer>
-
-
