@@ -19,10 +19,22 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('categories')->insert([
-        	'name'=> 'impresoras'
+        	'name'=> 'foto'
+        ]);
+        DB::table('categories')->insert([
+        	'name'=> 'computadoras'
+        ]);
+        DB::table('categories')->insert([
+        	'name'=> 'audio'
+        ]);
+        DB::table('categories')->insert([
+        	'name'=> 'mobile'
         ]);
         DB::table('categories')->insert([
         	'name'=> 'tv'
+        ]);
+        DB::table('categories')->insert([
+        	'name'=> 'accesorios'  
         ]);
 
         // $this->call(UsersTableSeeder::class);
