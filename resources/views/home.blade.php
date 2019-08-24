@@ -18,9 +18,9 @@
         <img src="/images/Boseagua.jpg" class="d-block w-100 h-80" alt="Bose">
         <div class="containerCarousel">
           <div class="carousel-caption text-left">
-            <h1>Speaker Bose waterproof</h1>
-            <p> Parlantes</p>
-            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/audio') }}" role="button">Ver más</a></p>
+            <h1>Parlantes waterproof</h1>
+            <p> Bose - UE - Apple</p>
+            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/categoria/3/audio') }}" role="button">Ver más</a></p>
           </div>
         </div>
       </div>
@@ -28,19 +28,19 @@
         <img src="/images/Boseagua.jpg" class="d-block w-100 h-80" alt="Bose">
         <div class="containerCarousel">
           <div class="carousel-caption text-left">
-            <h1>Prueba - 2</h1>
-            <p> Parlantes</p>
-            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/audio') }}" role="button">Ver más</a></p>
+            <h1>Parlantes Bose </h1>
+            <p></p>
+            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/categoria/3/audio') }}" role="button">Ver más</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/images/celulares-2019.jpg" class="d-bloITEck w-100 h-80" alt="BoseSPeaker">
+        <img src="/images/celulares-2019.jpg" class="d-bloITEck w-100 h-80" alt="celulares">
         <div class="containerCarousel">
           <div class="carousel-caption text-left">
-            <h1>Prueba - 3</h1>
-            <p> Parlantes</p>
-            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/audio') }}" role="button">Ver más</a></p>
+            <h1>Smartphones</h1>
+            <p> Google - Samsung - Xiaomi</p>
+            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/categoria/4/mobile') }}" role="button">Ver más</a></p>
           </div>
         </div>
       </div>
