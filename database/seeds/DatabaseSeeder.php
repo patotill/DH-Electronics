@@ -75,7 +75,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/nikon_d7500.jpg',
           'category_id'=>'1',
           'stock'=>'10',
-          'brand_id'=>'6'
+          'brand_id'=>'6',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
           'name'=> 'Nikon D850 DSLR (solo cuerpo)',
@@ -83,7 +85,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/nikon_d850.jpg',
           'category_id'=>'1',
           'stock'=>'10',
-          'brand_id'=>'6'
+          'brand_id'=>'6',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
           'name'=> 'DJI mavic pro 2 + control',
@@ -91,7 +95,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/dji_mavic_2_pro.jpg',
           'category_id'=>'1',
           'stock'=>'10',
-          'brand_id'=>'12'
+          'brand_id'=>'12',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
           'name'=> 'Sony Alpha a7R IV Mirrorless',
@@ -99,7 +105,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/sony_a7r_iv.jpg',
           'category_id'=>'1',
           'stock'=>'10',
-          'brand_id'=>'2'
+          'brand_id'=>'2',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
           'name'=> 'Sony Alpha a6400 Mirrorless',
@@ -107,7 +115,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/sony_alpha_a6400.jpg',
           'category_id'=>'1',
           'stock'=>'10',
-          'brand_id'=>'2'
+          'brand_id'=>'2',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
   //Computadoras
         DB::table('products')->insert([
@@ -116,7 +126,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/microsoft.jpg',
           'category_id'=>'2',
           'stock'=>'10',
-          'brand_id'=>'5'
+          'brand_id'=>'5',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
           'name'=> 'Microsoft 13.5" Surface Book 2 Multi-Touch 2-in-1',
@@ -124,7 +136,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/microsoft-13.jpg',
           'category_id'=>'2',
           'stock'=>'10',
-          'brand_id'=>'5'
+          'brand_id'=>'5',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
           'name'=> 'Macbook Air',
@@ -132,7 +146,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/macbookAir.jpg',
           'category_id'=>'2',
           'stock'=>'10',
-          'brand_id'=>'1'
+          'brand_id'=>'1',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
           'name'=> 'Lenovo 15.6" IdeaPad 330s Laptop',
@@ -140,7 +156,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/lenovo.jpg',
           'category_id'=>'2',
           'stock'=>'10',
-          'brand_id'=>'10'
+          'brand_id'=>'10',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
   //Audio
         DB::table('products')->insert([
@@ -149,7 +167,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/applepod.jpg',
           'category_id'=>'3',
           'stock'=>'10',
-          'brand_id'=>'1'
+          'brand_id'=>'1',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
           'name'=> 'Ultimate ears Wonderboom',
@@ -157,6 +177,8 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/wonderboom.jpg',
           'category_id'=>'3',
           'stock'=>'10',
+          'description'=>'Lorem ipsum dolor sit amet'
+          ,
         ]);
         DB::table('products')->insert([
           'name'=> 'Bose SoundLink Micro Bluetooth',
@@ -164,7 +186,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/bose_negro.jpg',
           'category_id'=>'3',
           'stock'=>'10',
-          'brand_id'=>'8'
+          'brand_id'=>'8',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
           'name'=> 'Bose SoundLink Revolve',
@@ -172,7 +196,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/bose-revolve.jpg',
           'category_id'=>'3',
           'stock'=>'10',
-          'brand_id'=>'8'
+          'brand_id'=>'8',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
   //Mobile
         DB::table('products')->insert([
@@ -181,7 +207,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/google_pixel_3.jpg',
           'category_id'=>'4',
           'stock'=>'10',
-          'brand_id'=>'4'
+          'brand_id'=>'4',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
         	'name'=> 'Samsung Galaxy S10',
@@ -189,7 +217,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/samsung10.jpg',
           'category_id'=>'4',
           'stock'=>'10',
-          'brand_id'=>'9'
+          'brand_id'=>'9',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
         	'name'=> 'Xiaomi Mi 9 Dual-SIM',
@@ -197,7 +227,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/xiaomi.jpg',
           'category_id'=>'4',
           'stock'=>'10',
-          'brand_id'=>'3'
+          'brand_id'=>'3',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
   //TV & Entretenimiento
         DB::table('products')->insert([
@@ -206,7 +238,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/sonyTV.jpg',
           'category_id'=>'5',
           'stock'=>'10',
-          'brand_id'=>'2'
+          'brand_id'=>'2',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
         	'name'=> 'Samsung RU7100 65" Class HDR 4K UHD Smart LED TV',
@@ -214,7 +248,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/samsungTV.jpg',
           'category_id'=>'5',
           'stock'=>'10',
-          'brand_id'=>'9'
+          'brand_id'=>'9',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
         	'name'=> 'Nintendo Switch + controles en azul y rojo',
@@ -222,7 +258,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/nintendo_switch.jpg',
           'category_id'=>'5',
           'stock'=>'10',
-          'brand_id'=>'7'
+          'brand_id'=>'7',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
         	'name'=> 'Google Chromecast Ultra (Black)',
@@ -230,7 +268,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/chromecast.jpg',
           'category_id'=>'5',
           'stock'=>'10',
-          'brand_id'=>'4'
+          'brand_id'=>'4',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
         	'name'=> 'Apple TV 4K (64GB)',
@@ -238,7 +278,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/appleTV.jpg',
           'category_id'=>'5',
           'stock'=>'10',
-          'brand_id'=>'1'
+          'brand_id'=>'1',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
   //Accesorios
         DB::table('products')->insert([
@@ -247,7 +289,9 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/caseSamsung.jpg',
           'category_id'=>'6',
           'stock'=>'10',
-          'brand_id'=>'9'
+          'brand_id'=>'9',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
         	'name'=> 'Soporte para el auto',
@@ -255,15 +299,19 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/soporteAuto.jpg',
           'category_id'=>'6',
           'stock'=>'10',
-          'brand_id'=>'3'
+          'brand_id'=>'3',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
         DB::table('products')->insert([
-          'name'=> 'Nintendo Joy-Con Controles',
+          'name'=> 'Nintendo Joy (con controles)',
           'price'=> '4200',
           'image'=> '/images/fotosDH/controlesNintendo.jpg',
           'category_id'=>'6',
           'stock'=>'10',
-          'brand_id'=>'7'
+          'brand_id'=>'7',
+          'description'=>'Lorem ipsum dolor sit amet'
+
         ]);
 
 
