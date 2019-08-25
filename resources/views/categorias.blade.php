@@ -41,12 +41,22 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <div class="buy-zone col-md-4 text-center overflow-hidden">
     <div class="prices text-center"><span class="price-you-pay bold">{{ $product->price }}</span></div>
     <br>
     <div class="boton text-center"><a class="btn btn-outline-secondary" href="{{ url('add-to-cart/'.$product->id) }}" role="button">Agregar</a></div>
     <br>
     <div class="boton text-center"><a class="btn btn-outline-secondary" href="/products/{{ $product->id }}" role="button">Ver detalle</a></div>
+=======
+      <div class="buy-zone col-md-4 text-center overflow-hidden">
+      <!-- <br><br> -->
+      <div class="prices"><span class="price-you-pay bold">{{ $product->price }}</span></div>
+      <br>
+      <div class="boton"><a class="btn" href="{{ url('add-to-cart/'.$product->id) }}">Agregar al carrito</a></div>
+    </div>
+  </div>
+>>>>>>> 3d8afe6a75c376d85145539ff7145865b0239fbd
   </div>
   @endforeach
 

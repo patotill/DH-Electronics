@@ -46,9 +46,13 @@
     <!-- <br><br> -->
     <div class="prices"><span class="price-you-pay bold">{{ $product->price }}</span></div>
     <br>
+<<<<<<< HEAD
     <div class="boton text-center"><a class="btn btn-outline-secondary" href="{{ url('') }}">Agregar</a></div>
 		<br>
     <div class="boton text-center"><a class="btn btn-outline-secondary" href="/products/{{ $product->id }}" role="button">Ver detalle</a></div>
+=======
+    <div class="boton"><a class="btn" href="{{ url('/audio') }}">Agregar al carrito</a></div>
+>>>>>>> 3d8afe6a75c376d85145539ff7145865b0239fbd
   </div>
 </div>
 </div>
