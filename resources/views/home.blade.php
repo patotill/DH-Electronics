@@ -18,29 +18,29 @@
         <img src="/images/Boseagua.jpg" class="d-block w-100 h-80" alt="Bose">
         <div class="containerCarousel">
           <div class="carousel-caption text-left">
-            <h1>Speaker Bose waterproof</h1>
-            <p> Parlantes</p>
-            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/audio') }}" role="button">Ver más</a></p>
+            <h1>Parlantes waterproof</h1>
+            <p> Bose - UE - Apple</p>
+            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/categoria/3/audio') }}" role="button">Ver más</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/images/Boseagua.jpg" class="d-block w-100 h-80" alt="Bose">
+        <img src="/images/foto.jpg" class="d-block w-100 h-80" alt="Bose">
         <div class="containerCarousel">
           <div class="carousel-caption text-left">
-            <h1>Prueba - 2</h1>
-            <p> Parlantes</p>
-            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/audio') }}" role="button">Ver más</a></p>
+            <h1>Fotografia</h1>
+            <p>Nikon - Sony - DJI</p>
+            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/categoria/1/fotografia') }}" role="button">Ver más</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/images/celulares-2019.jpg" class="d-bloITEck w-100 h-80" alt="BoseSPeaker">
+        <img src="/images/smartphone.jpg" class="d-bloITEck w-100 h-80" alt="celulares">
         <div class="containerCarousel">
           <div class="carousel-caption text-left">
-            <h1>Prueba - 3</h1>
-            <p> Parlantes</p>
-            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/audio') }}" role="button">Ver más</a></p>
+            <h1>Smartphones</h1>
+            <p> Samsung - Apple - Google</p>
+            <p><a class="btn btn-lg btn-outline-info" href="{{ url('/categoria/4/mobile') }}" role="button">Ver más</a></p>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@
     <div class="my-3 py-3">
       <img src="/images/BoseSPeaker.jpeg" class="img-fluid w-50 h-50" alt="audio">
       <br><br>
-        <a class="btn btn-outline-secondary" href="{{ url('/audio') }}">Parlantes</a>
+        <a class="btn btn-outline-secondary" href="{{ url('/categoria/3/audio') }}">Parlantes</a>
     </div>
   </div>
 
@@ -76,7 +76,7 @@
     <div class="pro my-3 p-3 justify-content ">
       <img src="/images/Fotografia.jpg" class="img-fluid w-50 h-50" alt="fotografia">
       <br><br>
-      <a class="btn btn-outline-secondary" href="{{ url('/fotografia') }}">Fotografía</a>
+      <a class="btn btn-outline-secondary" href="{{ url('/categoria/1/fotografia') }}">Fotografía</a>
     </div>
   </div>
 
@@ -84,7 +84,7 @@
     <div class="pro my-3 p-3">
       <img src="/images/dron.jpg" class="img-fluid w-50 h-50 " alt="fotografia">
       <br><br>
-        <a class="btn btn-outline-secondary" href="{{ url('/fotografia') }}">Drones & VideoCamaras</a>
+        <a class="btn btn-outline-secondary" href="{{ url('/categoria/1/fotografia') }}">Drones & VideoCamaras</a>
     </div>
   </div>
 
@@ -92,7 +92,7 @@
     <div class="pro my-3 py-3">
       <img src="/images/iphone.jpeg" class="img-fluid w-50 h-50" alt="celulares">
       <br><br>
-          <a class="btn btn-outline-secondary" href="{{ url('/mobile') }}">Celulares</a>
+          <a class="btn btn-outline-secondary" href="{{ url('/categoria/4/mobile') }}">Celulares</a>
     </div>
   </div>
 </div>
@@ -102,7 +102,7 @@
     <div class="pro my-3 p-3">
       <img src="/images/nintendo.jpg" class="img-fluid w-50 h-50" alt="tv">
       <br><br>
-      <a class="btn btn-outline-secondary" href="{{ url('/tv') }}">Gaming</a>
+      <a class="btn btn-outline-secondary" href="{{ url('/categoria/5/tv') }}">Gaming</a>
     </div>
   </div>
 
@@ -110,15 +110,15 @@
     <div class="pro my-3 py-3">
       <img src="/images/Accesorios.jpeg" class="img-fluid w-50 h-50" alt="accesorios">
       <br><br>
-      <a class="btn btn-outline-secondary" href="{{ url('/accesorios') }}">Accesorios</a>
+      <a class="btn btn-outline-secondary" href="{{ url('/categoria/6/accesorios') }}">Accesorios</a>
     </div>
   </div>
 
   <div class="pro bg-inherit mr-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center overflow-hidden">
     <div class="pro my-3 p-3">
-      <img src="/images/fotosDH/lenovo_.jpg" class="img-fluid w-50 h-50" alt="compu">
+      <img src="/images/fotosDH/lenovo.jpg" class="img-fluid w-50 h-50" alt="compu">
       <br><br>
-      <a class="btn btn-outline-secondary" href="{{ url('/compus') }}">Computadoras</a>
+      <a class="btn btn-outline-secondary" href="{{ url('/categoria/2/computadoras') }}">Computadoras</a>
     </div>
   </div>
 
@@ -126,7 +126,7 @@
     <div class="pro my-3 py-3">
       <img src="/images/fotosDH/samsung_.jpg" class="img-fluid w-50 h-50" alt="TV">
       <br><br>
-        <a class="btn btn-outline-secondary" href="{{ url('/tv') }}">Televisores</a>
+        <a class="btn btn-outline-secondary" href="{{ url('/categoria/5/tv') }}">Televisores</a>
     </div>
   </div>
 </div>

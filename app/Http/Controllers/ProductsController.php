@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
+use App\Brand;
 
 class ProductsController extends Controller
 {
@@ -26,7 +27,11 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+      $categories = Category::orderBy('id')->get();
+      return view('products-create-form', compact('categories'));
+
+      $brands = Brand::orderBy('id')->get();
+      return view('products-create-form', compact('brands'));
     }
 
     /**
