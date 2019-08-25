@@ -30,8 +30,6 @@ class ProductsController extends Controller
       $categories = Category::orderBy('id')->get();
       return view('products-create-form', compact('categories'));
 
-      $brands = Brand::orderBy('id')->get();
-      return view('products-create-form', compact('brands'));
     }
 
     /**
@@ -40,9 +38,63 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $formNewProd)
     {
-        //
+      // Validación de Campos
+			$formNewProd->validate([
+				'name' => 'required | string',
+        'description' => 'string',
+				'price' => 'required | numeric',
+				'image' => 'required | image', // image = .jpg | .jpeg | .png | .svg | .bmp | .gif
+			], [
+				// 'required' => 'El campo :attribute es obligatorio',
+				'name.required' => 'El campo :name es obligatorio',
+				'price.required' => 'El rating es obligatorio',
+				'image.required' => 'La imagen es obligatoria',
+			]);
+
+			// Request es el famoso $_POST, con un montón de cosas más
+			// El método all() pide todos los input que hay en el formulario
+
+			// Forma de guardar #1
+			// Movie::create([
+			// 	'title' => $request->input('title'),
+			// 	'rating' => $request->input('rating'),
+			// 	'awards' => $request->input('awards'),
+			// 	'length' => $request->input('length'),
+			// 	'release_date' => $request->input('release_date'),
+			// 	'genre_id' => $request->input('genre_id'),
+			// ]);
+
+			// Forma de guardar #2 - create() guarda en DB y retorna el objeto que acabamos de guardar
+ 			$productSaved = Product::create($formNewProd->all());
+
+			// Pedimos el campo que tiene la imagen
+			$image = $formNewProd->file('image');
+
+			// Armamos un nombre para la imagen
+			$nombreImagen = uniqid('img-') . '.' . $image->extension();
+
+			// Subir la imagen a la carpeta final
+			$image->storePubliclyAs('public/images/fotosDH', $nombreImagen);
+			// Recordar que la imagen se sube en storage/app/public/posters
+
+			// Después de subir la imagen, vamos a asociarle a la columna poster de la película recién creada, el nombre de la imagen que subimos
+			$productSaved->image = $nombreImagen;
+			$productSaved->save();
+
+			// Forma de guardar #3 (recomendado para usar en el update)
+			// $movieToSave = new Movie;
+			// $movieToSave->title = $request->input('title');
+			// $movieToSave->rating = $request->input('rating');
+			// $movieToSave->awards = $request->input('awards');
+			// $movieToSave->length = $request->input('length');
+			// $movieToSave->release_date = $request->input('release_date');
+			// $movieToSave->genre_id = $request->input('genre_id');
+			// $movieToSave->save();
+
+			// Vamos a retornar una redirección a un RUTA
+			return redirect('/products');
     }
 
     /**
@@ -57,6 +109,27 @@ class ProductsController extends Controller
   			return view('products-show', compact('productToShow'));
     }
 
+
+        /**
+         * Remove the specified resource from storage.
+         *
+         * @param  int  $id
+         * @return \Illuminate\Http\Response
+         */
+        public function destroy($id)
+        {
+          $productToDelete = Product::find($id);
+          $productToDelete->delete();
+          return redirect('/products');
+        }
+
+        public function category($id, $name)
+        {
+            $productsByCategory = Product::where('category_id', $id)->get();
+            return view('/categorias', compact('productsByCategory'));
+        }
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -65,26 +138,31 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+      $productToEdit = Product::find($id);
+      $categories = Category::orderBy('id')->get();
+      return view('products-edit-form', compact('productToEdit', 'categories'));
     }
 
 
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function update(Request $request, $id)
     {
-        //
-    }
+      $productToUpdate = Product::find($id);
 
-    public function category($id, $name)
-    {
-        $productsByCategory = Product::where('category_id', $id)->get();
-        return view('/categorias', compact('productsByCategory'));
+			$productToUpdate->name = $request->input('name');
+			$productToUpdate->price = $request->input('price');
+			$productToUpdate->description = $request->input('description');
+			$productToUpdate->category_id = $request->input('category_id');
+      $productToUpdate->stock = $request->input('stock');
+      $productToUpdate->brand_id = $request->input('brand_id');
+
+			$image = $request->file('image');
+			$nombreImagen = uniqid('img-') . '.' . $image->extension();
+			$image->storePubliclyAs('public/images/fotosDH', $nombreImagen);
+
+			$productToUpdate->image = $nombreImagen;
+			$productToUpdate->save();
+
+			return redirect('/products');
     }
 
     public function cart()
@@ -145,6 +223,8 @@ class ProductsController extends Controller
      }
 
 
+  /*
+
     public function update(Request $request)
     {
         if($request->id and $request->quantity)
@@ -158,6 +238,8 @@ class ProductsController extends Controller
             session()->flash('success', 'Cart updated successfully');
         }
     }
+
+    */
 
     public function remove(Request $request)
     {

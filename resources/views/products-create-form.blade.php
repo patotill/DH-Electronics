@@ -29,12 +29,33 @@
 				</div>
 			</div>
 
+
+				<div class="col-6">
+					<div class="form-group">
+						<label>Descripción:</label>
+						<input class="form-control" type="text" name="description" value="{{ old('description') }}" placeholder="Ingrese una descripcion del producto">
+						@if ($errors->has('description'))
+							<p style="color: red;">{{ $errors->first('description') }}</p>
+						@endif
+					</div>
+				</div>
+
 			<div class="col-6">
 				<div class="form-group">
 					<label>Precio:</label>
 					<input class="form-control" type="number" name="price" value="{{ old('price') }}">
 					@error ('price')
 						<p style="color: red;">{{ $errors->first('price') }}</p>
+					@enderror
+				</div>
+			</div>
+
+			<div class="col-6">
+				<div class="form-group">
+					<label>Stock:</label>
+					<input class="form-control" type="number" name="stock" value="{{ old('stock') }}">
+					@error ('stock')
+						<p style="color: red;">{{ $errors->first('stock') }}</p>
 					@enderror
 				</div>
 			</div>
@@ -52,7 +73,8 @@
 				</div>
 			</div>
 
-			 {{--
+
+			{{--
 			 <div class="col-6">
 				<div class="form-group">
 					<label>Marca:</label>
@@ -63,8 +85,8 @@
 					</select>
 				</div>
 			</div>
-			--}}
-			
+--}}
+
 			<div class="col-6">
 				<div class="form-group">
 					<label>Categoria:</label>
