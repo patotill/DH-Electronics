@@ -19,34 +19,38 @@
     <div class="desc_zone col-md-4 text-center overflow-hidden">
 
       <div class="itemHeader">
-        <h3><a href="#" class="link">
-          <span itemprop="brand">{{ $product->name }}</span>
-        </a></h3>
+        <h3>
+          <span itemprop="name">{{ $product->name }}</span>
+        </h3>
       </div>
       <div class="sect text-left">
         <div class="descripcion">
-          <h4>Descripcion</h4>
+          <h4>Descripción</h4>
           <ul class="lista">
-          <li><h>{{ $product->category->name }}</h>
-            <ul>
-              <li> Blanco</li>
-              <li> Negro</li>
-            </ul>
+          <li>Categoría: <h>{{ $product->category->name }}</h>
+          <li> Colores disponibles:
+              <ul>
+                <li> Blanco</li>
+                <li> Negro</li>
+              </ul>
           </li>
-            <li>Storage: 64 GB</li>
-            <li>Size: 5.6" con OLED display</li>
+            <li>Capacidad: 64 GB</li>
+            <li>Tamaño: 5.6" con OLED display</li>
             <li>12.2MP Rear Dual-Pixel Camera</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="buy-zone col-md-4 text-center overflow-hidden">
-    <div class="prices text-center"><span class="price-you-pay bold">{{ $product->price }}</span></div>
-    <br>
-    <div class="boton text-center"><a class="btn btn-outline-secondary" href="{{ url('add-to-cart/'.$product->id) }}" role="button">Agregar</a></div>
-    <br>
-    <div class="boton text-center"><a class="btn btn-outline-secondary" href="/products/{{ $product->id }}" role="button">Ver detalle</a></div>
+      <div class="buy-zone col-md-4 text-center overflow-hidden">
+
+      <div class="prices"><span class="price-you-pay bold">$ {{ $product->price }}</span></div>
+      <br>
+      <div class="boton text-center"><a class="btn btn-outline-secondary" href="{{ url('') }}">Agregar al carrito</a></div>
+  		<br>
+      <div class="boton text-center"><a class="btn btn-outline-secondary" href="/products/{{ $product->id }}" role="button">Ver detalle</a></div>
+    </div>
+  </div>
   </div>
   @endforeach
 
