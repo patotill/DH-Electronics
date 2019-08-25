@@ -48,7 +48,8 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $productToShow = Product::find($id);
+  			return view('products-show', compact('productToShow'));
     }
 
     /**
@@ -62,7 +63,7 @@ class ProductsController extends Controller
         //
     }
 
-    
+
 
     /**
      * Remove the specified resource from storage.
@@ -144,28 +145,28 @@ class ProductsController extends Controller
         if($request->id and $request->quantity)
         {
             $cart = session()->get('cart');
- 
+
             $cart[$request->id]["quantity"] = $request->quantity;
- 
+
             session()->put('cart', $cart);
- 
+
             session()->flash('success', 'Cart updated successfully');
         }
     }
- 
+
     public function remove(Request $request)
     {
         if($request->id) {
- 
+
             $cart = session()->get('cart');
- 
+
             if(isset($cart[$request->id])) {
- 
+
                 unset($cart[$request->id]);
- 
+
                 session()->put('cart', $cart);
             }
- 
+
             session()->flash('success', 'Product removed successfully');
         }
     }
