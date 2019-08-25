@@ -3,9 +3,12 @@
 @section('title', $productToShow->name)
 
 @section('content')
-	<h2>Detalle de: {{ $productToShow->name }}</h2>
-	<p><b>Precio:</b> {{ $productToShow->price }}</p>
+	<h2>DETALLE DEL PRODUCTO</h2>
+	<h3>{{ $productToShow->name }}</h3>
+	<h4><b>Precio: $</b> {{ $productToShow->price }}</h4>
 	<p><b>Categoria:</b> {{ $productToShow->category->name}}</p>
+	<p><b>Descripción:</b> {{ $productToShow->description}}</p>
+
 	<img src="{{ $productToShow->image }}" width="200">
 	<hr>
 

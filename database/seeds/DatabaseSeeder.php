@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'1',
           'stock'=>'10',
           'brand_id'=>'6',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -86,7 +86,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'1',
           'stock'=>'10',
           'brand_id'=>'6',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'1',
           'stock'=>'10',
           'brand_id'=>'12',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -106,7 +106,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'1',
           'stock'=>'10',
           'brand_id'=>'2',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -116,7 +116,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'1',
           'stock'=>'10',
           'brand_id'=>'2',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
   //Computadoras
@@ -127,7 +127,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'2',
           'stock'=>'10',
           'brand_id'=>'5',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -137,7 +137,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'2',
           'stock'=>'10',
           'brand_id'=>'5',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -147,7 +147,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'2',
           'stock'=>'10',
           'brand_id'=>'1',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -157,7 +157,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'2',
           'stock'=>'10',
           'brand_id'=>'10',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
   //Audio
@@ -168,7 +168,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'3',
           'stock'=>'10',
           'brand_id'=>'1',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -177,7 +177,7 @@ class DatabaseSeeder extends Seeder
           'image'=> '/images/fotosDH/wonderboom.jpg',
           'category_id'=>'3',
           'stock'=>'10',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
           ,
         ]);
         DB::table('products')->insert([
@@ -187,7 +187,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'3',
           'stock'=>'10',
           'brand_id'=>'8',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -197,7 +197,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'3',
           'stock'=>'10',
           'brand_id'=>'8',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
   //Mobile
@@ -208,7 +208,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'4',
           'stock'=>'10',
           'brand_id'=>'4',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -218,7 +218,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'4',
           'stock'=>'10',
           'brand_id'=>'9',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -228,7 +228,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'4',
           'stock'=>'10',
           'brand_id'=>'3',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
   //TV & Entretenimiento
@@ -239,7 +239,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'5',
           'stock'=>'10',
           'brand_id'=>'2',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -249,7 +249,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'5',
           'stock'=>'10',
           'brand_id'=>'9',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -259,7 +259,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'5',
           'stock'=>'10',
           'brand_id'=>'7',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -269,7 +269,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'5',
           'stock'=>'10',
           'brand_id'=>'4',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -279,7 +279,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'5',
           'stock'=>'10',
           'brand_id'=>'1',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
   //Accesorios
@@ -290,7 +290,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'6',
           'stock'=>'10',
           'brand_id'=>'9',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -300,7 +300,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'6',
           'stock'=>'10',
           'brand_id'=>'3',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
         DB::table('products')->insert([
@@ -310,7 +310,7 @@ class DatabaseSeeder extends Seeder
           'category_id'=>'6',
           'stock'=>'10',
           'brand_id'=>'7',
-          'description'=>'Lorem ipsum dolor sit amet'
+          'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
 
