@@ -31,11 +31,6 @@ Route::get('/faq', function () {
 Route::get('/categoria/{id}/{name}', 'ProductsController@category');
 
 
-Route::get('/mobile', function () {
-    return view('mobile');
-});
-
-
 Route::get('cart', 'ProductsController@cart');
 
 Route::get('add-to-cart/{id}', 'ProductsController@addToCart');
@@ -43,3 +38,9 @@ Route::get('add-to-cart/{id}', 'ProductsController@addToCart');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => 'usuarioAdmin'], function () {
+    Route::get('/usuarioAdmin/series', 'Admin\SeriesController@index');
+    Route::get('/usuarioAdmin/series/{id}', 'Admin\SeriesController@edit');
+});

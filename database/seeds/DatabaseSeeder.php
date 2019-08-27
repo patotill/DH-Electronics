@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+//
+
 //MARCAS
         DB::table('brands')->insert([
         	'name'=> 'apple'
@@ -313,10 +315,6 @@ class DatabaseSeeder extends Seeder
           'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 
         ]);
-
-
-        // $this->call(UsersTableSeeder::class);
-        // factory(App\Product::class)->times(50)->create();
 
 
     }

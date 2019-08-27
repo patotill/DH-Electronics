@@ -53,18 +53,6 @@ class ProductsController extends Controller
 				'image.required' => 'La imagen es obligatoria',
 			]);
 
-			// Request es el famoso $_POST, con un montón de cosas más
-			// El método all() pide todos los input que hay en el formulario
-
-			// Forma de guardar #1
-			// Movie::create([
-			// 	'title' => $request->input('title'),
-			// 	'rating' => $request->input('rating'),
-			// 	'awards' => $request->input('awards'),
-			// 	'length' => $request->input('length'),
-			// 	'release_date' => $request->input('release_date'),
-			// 	'genre_id' => $request->input('genre_id'),
-			// ]);
 
 			// Forma de guardar #2 - create() guarda en DB y retorna el objeto que acabamos de guardar
  			$productSaved = Product::create($formNewProd->all());
@@ -83,17 +71,7 @@ class ProductsController extends Controller
 			$productSaved->image = $nombreImagen;
 			$productSaved->save();
 
-			// Forma de guardar #3 (recomendado para usar en el update)
-			// $movieToSave = new Movie;
-			// $movieToSave->title = $request->input('title');
-			// $movieToSave->rating = $request->input('rating');
-			// $movieToSave->awards = $request->input('awards');
-			// $movieToSave->length = $request->input('length');
-			// $movieToSave->release_date = $request->input('release_date');
-			// $movieToSave->genre_id = $request->input('genre_id');
-			// $movieToSave->save();
 
-			// Vamos a retornar una redirección a un RUTA
 			return redirect('/products');
     }
 
@@ -169,7 +147,8 @@ class ProductsController extends Controller
        {
            return view('cart');
        }
-      public function addToCart($id)
+
+    public function addToCart($id)
         {
             $product = Product::find($id);
 
@@ -178,8 +157,6 @@ class ProductsController extends Controller
                 abort(404);
 
             }
-
-            $cart = session()->get('cart');
 
             // if cart is empty then this the first product
             if(!$cart) {
@@ -223,39 +200,6 @@ class ProductsController extends Controller
      }
 
 
-  /*
 
-    public function update(Request $request)
-    {
-        if($request->id and $request->quantity)
-        {
-            $cart = session()->get('cart');
-
-            $cart[$request->id]["quantity"] = $request->quantity;
-
-            session()->put('cart', $cart);
-
-            session()->flash('success', 'Cart updated successfully');
-        }
-    }
-
-    */
-
-    public function remove(Request $request)
-    {
-        if($request->id) {
-
-            $cart = session()->get('cart');
-
-            if(isset($cart[$request->id])) {
-
-                unset($cart[$request->id]);
-
-                session()->put('cart', $cart);
-            }
-
-            session()->flash('success', 'Product removed successfully');
-        }
-    }
 
 }

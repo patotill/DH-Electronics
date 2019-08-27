@@ -57,8 +57,7 @@
 
 
 <!-- PRODUCTOS -->
-
-
+{{ isset($_GET['msj']) ? $_GET['msj'] : null }}
 
 <div id="centerRegionContainer" class="centerRegionContainer ">
 
@@ -116,7 +115,7 @@
 
   <div class="pro bg-inherit mr-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center overflow-hidden">
     <div class="pro my-3 p-3">
-      <img src="/images/fotosDH/lenovo.jpg" class="img-fluid w-50 h-50" alt="compu">
+      <img src="/storage/images/lenovo.jpg" class="img-fluid w-50 h-50" alt="compu">
       <br><br>
       <a class="btn btn-outline-secondary" href="{{ url('/categoria/2/computadoras') }}">Computadoras</a>
     </div>
@@ -124,7 +123,7 @@
 
   <div class="pro bg-inherit mr-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center overflow-hidden">
     <div class="pro my-3 py-3">
-      <img src="/images/fotosDH/samsung_.jpg" class="img-fluid w-50 h-50" alt="TV">
+      <img src="/storage/images/fotoDH/samsung_.jpg" class="img-fluid w-50 h-50" alt="TV">
       <br><br>
         <a class="btn btn-outline-secondary" href="{{ url('/categoria/5/tv') }}">Televisores</a>
     </div>
@@ -133,6 +132,8 @@
 
 </div>
 </main>
+
+
 
 
 @endsection
