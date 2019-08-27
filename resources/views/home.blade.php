@@ -57,7 +57,8 @@
 
 
 <!-- PRODUCTOS -->
-{{ isset($_GET['msj']) ? $_GET['msj'] : null }}
+{{ session()->get('msj') }}
+
 
 <div id="centerRegionContainer" class="centerRegionContainer ">
 

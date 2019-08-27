@@ -28,7 +28,8 @@ class ProductsController extends Controller
     public function create()
     {
       $categories = Category::orderBy('id')->get();
-      return view('products-create-form', compact('categories'));
+      $brands = Brand::orderBy('id')->get();
+      return view('products-create-form', compact('categories', 'brands'));
 
     }
 
@@ -99,7 +100,10 @@ class ProductsController extends Controller
           $productToDelete = Product::find($id);
           $productToDelete->delete();
 
-           return redirect()->route('home', ['borrar'=>'El producto ha sido eliminado satisfactoriamente']);
+           return redirect()->route('home')->with([
+             'msj'=>'El producto ha sido eliminado satisfactoriamente'
+           ]);
+
           // <a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
 
         }
@@ -120,6 +124,9 @@ class ProductsController extends Controller
     public function edit($id)
     {
       $productToEdit = Product::find($id);
+
+      $this->authorize('update', $productToEdit);
+
       $categories = Category::orderBy('id')->get();
       return view('products-edit-form', compact('productToEdit', 'categories'));
     }
@@ -136,17 +143,14 @@ class ProductsController extends Controller
       $productToUpdate->stock = $request->input('stock');
       $productToUpdate->brand_id = $request->input('brand_id');
 
-      /*
-      $image = $request->file('image');
-			$nombreImagen = uniqid('img-') . '.' . $image->extension();
-			$image->storePubliclyAs('public/images/fotosDH', $nombreImagen);
 
-			$productToUpdate->image = $nombreImagen;
-      */
+			$saved = $productToUpdate->save();
 
-			$productToUpdate->save();
-
-			return redirect('/products');
+      return redirect()->route('productShow', $id)->with([
+        'saved' => $saved,
+        'msj'=>'El producto ha sido eliminado satisfactoriamente'
+      ]);
+			// return redirect('/products');
     }
 
     public function cart()

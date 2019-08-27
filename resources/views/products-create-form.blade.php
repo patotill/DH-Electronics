@@ -1,8 +1,16 @@
 @extends('layouts.app')
 
 @section('title', 'Crear un producto')
-
+@section('customStyles')
+<link rel="stylesheet" href="/css/styles-register.css">
+@endsection
 @section('content')
+
+<div class="register-container">
+  <p style="text-align: center;">
+    <i class="fab fa-digital-ocean"></i>
+  </p>
+
 	<h2>Formulario para crear productos</h2>
 
 	@if ($errors)
@@ -18,88 +26,68 @@
 		{{-- {{ csrf_field() }} --}}
 		@csrf
 
-		<div class="row">
-			<div class="col-6">
-				<div class="form-group">
-					<label>Nombre:</label>
-					<input class="form-control" type="text" name="name" value="{{ old('name') }}" placeholder="Ingresar el nombre de producto">
-					@if ($errors->has('name'))
-						<p style="color: red;">{{ $errors->first('name') }}</p>
-					@endif
-				</div>
-			</div>
+		<label for="name">Nombre</label>
+		<input class="form-control" type="text" name="name" value="{{ old('name') }}" placeholder="Ingresar el nombre de producto">
+		@error('name')
+			<span class="invalid-feedback" role="alert">
+				<strong>{{ $errors->first('name') }}</strong>
+			</span>
+		 @enderror
+
+		<!-- @if ($errors->has('name'))
+			<p style="color: red;">{{ $errors->first('name') }}</p>
+		@endif -->
 
 
-				<div class="col-6">
-					<div class="form-group">
-						<label>Descripción:</label>
+						<label for ="descripcion">Descripción</label>
 						<input class="form-control" type="text" name="description" value="{{ old('description') }}" placeholder="Ingrese una descripcion del producto">
 						@if ($errors->has('description'))
 							<p style="color: red;">{{ $errors->first('description') }}</p>
 						@endif
-					</div>
-				</div>
 
-			<div class="col-6">
-				<div class="form-group">
-					<label>Precio:</label>
+
+
+					<label for="precio">Precio</label>
 					<input class="form-control" type="number" name="price" value="{{ old('price') }}">
 					@error ('price')
 						<p style="color: red;">{{ $errors->first('price') }}</p>
 					@enderror
-				</div>
-			</div>
 
-			<div class="col-6">
-				<div class="form-group">
-					<label>Stock:</label>
+
+
+					<label for="stock">Stock</label>
 					<input class="form-control" type="number" name="stock" value="{{ old('stock') }}">
 					@error ('stock')
 						<p style="color: red;">{{ $errors->first('stock') }}</p>
 					@enderror
-				</div>
-			</div>
 
-			<div class="col-6">
-				<div class="form-group">
-					<label>Imagen:</label>
-					<div class="custom-file">
-						<input type="file" class="custom-file-input" name="image">
-						<label class="custom-file-label">Elegir Imagen</label>
-					</div>
+
+						<label for ="image">Imagen</label>
+						<input class="btn btn-outline-success" name="image" type="file">
+
+
 					@error ('image')
 						<p style="color: red;">{{ $errors->first('image') }}</p>
 					@enderror
-				</div>
-			</div>
 
 
-			{{--
-			 <div class="col-6">
-				<div class="form-group">
-					<label>Marca:</label>
-					<select class="form-control" name="brand_id">
+					<label for ="categoria">marcas</label>
+					<select class="form-control" name="category_id">
 						@foreach ($brands as $brand)
 							<option value="{{ $brand->id }}"> {{ $brand->name }} </option>
 						@endforeach
 					</select>
-				</div>
-			</div>
---}}
 
-			<div class="col-6">
-				<div class="form-group">
-					<label>Categoria:</label>
+					<label for ="categoria">Categoria</label>
 					<select class="form-control" name="category_id">
 						@foreach ($categories as $category)
 							<option value="{{ $category->id }}"> {{ $category->name }} </option>
 						@endforeach
 					</select>
-				</div>
-			</div>
 
-		</div>
+
 
 		<button type="submit" class="btn btn-success">Guardar</button>
 	</form>
+	 </div>
 	@endsection

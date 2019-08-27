@@ -4,6 +4,10 @@
 
 	<div class="text-center">
 
+		@if(session('saved'))
+			<p class="alert alert-success">El producto ha sido guardado</p>
+		@endif
+
 		<h2>DETALLE DEL PRODUCTO</h2>
 		<h3>{{ $productToShow->name }}</h3>
 		<h4><b>Precio: $</b> {{ $productToShow->price }}</h4>
@@ -13,9 +17,9 @@
 		<img src="/storage/images/fotosDH/{{ $productToShow->image }}" width="200">
 		{{---	{{Storage:url($productToShow->image) --}}
 		<hr>
-		
-		@if( isset (Auth::user()->typeUser) && Auth::user()->typeUser == 1)
 
+		@auth
+			@if(Auth::user()->isAdmin())
 			<form action="/products/destroy/{{ $productToShow->id }}" method="post" style="display: inline-block;">
 				{{-- Siempre un formulario necesita el toke --}}
 				@csrf
@@ -24,21 +28,15 @@
 				<button type="submit" class="btn btn-danger">Eliminar</button>
 			</form>
 
+			@can('update', $productToShow)
+			<a href="/products/edit/{{ $productToShow->id }}" class="btn btn-warning">Editar</a>
+			@endcan
 
-			
+			</form>
+			@endif
+		@endauth
 
-
-		<a href="/products/edit/{{ $productToShow->id }}" class="btn btn-warning">Editar</a>
-		</form>
 		<a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
-		@else
-		
-		   <a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
-		
-		
-		@endif
-
-
 	</div>
 
 
