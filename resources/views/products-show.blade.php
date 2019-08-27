@@ -13,8 +13,9 @@
 		<img src="/storage/images/fotosDH/{{ $productToShow->image }}" width="200">
 		{{---	{{Storage:url($productToShow->image) --}}
 		<hr>
+		
+		@if( isset (Auth::user()->typeUser) && Auth::user()->typeUser == 1)
 
-		@if( Auth::user()->typeUser == 1 )
 			<form action="/products/destroy/{{ $productToShow->id }}" method="post" style="display: inline-block;">
 				{{-- Siempre un formulario necesita el toke --}}
 				@csrf
@@ -24,15 +25,17 @@
 			</form>
 
 
-			<button type="submit" class="btn btn-danger">Eliminar</button>
-		</form>
+			
 
 
 		<a href="/products/edit/{{ $productToShow->id }}" class="btn btn-warning">Editar</a>
 		</form>
-<a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
+		<a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
 		@else
+		
 		   <a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
+		
+		
 		@endif
 
 
