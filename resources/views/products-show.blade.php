@@ -1,8 +1,7 @@
 @extends('layouts.app')
-
 @section('title', $productToShow->name)
-
 @section('content')
+
 	<div class="text-center">
 
 		<h2>DETALLE DEL PRODUCTO</h2>
@@ -15,23 +14,27 @@
 		{{---	{{Storage:url($productToShow->image) --}}
 		<hr>
 
-		{{-- @auth --}}
-			<form action="/products/{{ $productToShow->id }}" method="post" style="display: inline-block;">
-				{{-- Siempre un formulario necesita el toke --}}
-				@csrf
-				{{-- Para usar el método HTTP que realmente queremos usar --}}
-				{{ method_field('delete') }}
-				<button type="submit" class="btn btn-danger">Eliminar</button>
-			</form>
+		@if( Auth::user()->typeUser == 1 )
+		<form action="/products/{{ $productToShow->id }}" method="post" style="display: inline-block;">
+			{{-- Siempre un formulario necesita el toke --}}
+			@csrf
+			{{-- Para usar el método HTTP que realmente queremos usar --}}
+			{{ method_field('delete') }}
 
 
-			<a href="/products/edit/{{ $productToShow->id }}" class="btn btn-warning">Editar</a>
-			</form>
+			<button type="submit" class="btn btn-danger">Eliminar</button>
+		</form>
 
-			<a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
+
+		<a href="/products/edit/{{ $productToShow->id }}" class="btn btn-warning">Editar</a>
+		</form>
+<a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
+		@else
+		   <a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
+		@endif
 
 
 	</div>
 
-	{{-- @endauth --}}
+
 @endsection
