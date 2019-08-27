@@ -13,7 +13,7 @@
 
 	<form action="/products/{{ $productToEdit->id }}" method="post" enctype="multipart/form-data">
 		@csrf
-		{{ method_field('put') }}
+
 
 		<div class="row">
 			<div class="col-6">
@@ -70,7 +70,7 @@
 			<div class="col-6">
 				<div class="form-group">
 					<label>Categoria:</label>
-					<select class="form-control" name="genre_id">
+					<select class="form-control" name="category_id">
 						@foreach ($categories as $oneCategory)
 							<option
 								value="{{ $oneCategory->id }}"

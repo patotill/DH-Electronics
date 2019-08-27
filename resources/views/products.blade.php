@@ -27,7 +27,7 @@
       <div class="descripcion">
         <h4>Descripción</h4>
         <ul class="lista">
-        <li>Categoría: <h>{{ $product->category->name }}</h>
+        <li>Categoría: <h>{{ $product->category->name ?? 'Sin categoria'}}</h>
         <li> Colores disponibles:
             <ul>
               <li> Blanco</li>

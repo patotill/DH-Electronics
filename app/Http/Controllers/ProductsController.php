@@ -17,7 +17,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('products', compact('products'));
+        return view('/products', compact('products'));
     }
 
     /**
@@ -120,7 +120,10 @@ class ProductsController extends Controller
         {
           $productToDelete = Product::find($id);
           $productToDelete->delete();
-          return redirect('/products');
+
+          return back()->with('success', 'Producto eliminado satisfactoriamente!!');
+          // <a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
+
         }
 
         public function category($id, $name)
@@ -155,11 +158,14 @@ class ProductsController extends Controller
       $productToUpdate->stock = $request->input('stock');
       $productToUpdate->brand_id = $request->input('brand_id');
 
-			$image = $request->file('image');
+      /*
+      $image = $request->file('image');
 			$nombreImagen = uniqid('img-') . '.' . $image->extension();
 			$image->storePubliclyAs('public/images/fotosDH', $nombreImagen);
 
 			$productToUpdate->image = $nombreImagen;
+      */
+
 			$productToUpdate->save();
 
 			return redirect('/products');

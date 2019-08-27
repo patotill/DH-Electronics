@@ -111,6 +111,9 @@
        <li class="nav-item">
          <a class="nav-link" href="{{ url('/categoria/6/accesorios') }}">Accesorios</a>
        </li>
+       <li class="nav-item">
+         <a class="nav-link" href="{{ url('/products') }}">Todos los productos</a>
+       </li>
 
      </ul>
 
