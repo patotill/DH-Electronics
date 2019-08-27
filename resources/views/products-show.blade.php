@@ -18,8 +18,7 @@
 		{{---	{{Storage:url($productToShow->image) --}}
 		<hr>
 
-		@auth
-			@if(Auth::user()->isAdmin())
+		@can('update', $productToShow)
 			<form action="/products/destroy/{{ $productToShow->id }}" method="post" style="display: inline-block;">
 				{{-- Siempre un formulario necesita el toke --}}
 				@csrf
@@ -28,13 +27,12 @@
 				<button type="submit" class="btn btn-danger">Eliminar</button>
 			</form>
 
-			@can('update', $productToShow)
+
 			<a href="/products/edit/{{ $productToShow->id }}" class="btn btn-warning">Editar</a>
 			@endcan
 
 			</form>
-			@endif
-		@endauth
+
 
 		<a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
 	</div>
