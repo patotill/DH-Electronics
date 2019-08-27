@@ -99,7 +99,7 @@ class ProductsController extends Controller
           $productToDelete = Product::find($id);
           $productToDelete->delete();
 
-          return back()->with('success', 'Producto eliminado satisfactoriamente!!');
+           return redirect()->route('home', ['borrar'=>'El producto ha sido eliminado satisfactoriamente']);
           // <a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
 
         }

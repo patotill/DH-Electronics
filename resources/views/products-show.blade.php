@@ -16,11 +16,11 @@
 		<hr>
 
 		{{-- @auth --}}
-			<form action="/products/{{ $productToShow->id }}" method="post" style="display: inline-block;">
+			<form action="/products/destroy/{{ $productToShow->id }}" method="post" style="display: inline-block;">
 				{{-- Siempre un formulario necesita el toke --}}
 				@csrf
 				{{-- Para usar el método HTTP que realmente queremos usar --}}
-				{{ method_field('delete') }}
+				
 				<button type="submit" class="btn btn-danger">Eliminar</button>
 			</form>
 

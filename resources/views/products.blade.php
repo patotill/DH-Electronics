@@ -2,7 +2,12 @@
 @section('title', "Productos")
 @section('content')
 
+
+
+  {{ isset($_GET['borrar']) ? $_GET['borrar'] : null }}
 <div class="containerProductos" id="containerProductos" style="">
+
+
 
 @foreach ($products as $product)
 
