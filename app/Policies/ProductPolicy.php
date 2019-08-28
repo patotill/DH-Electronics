@@ -51,6 +51,8 @@ class ProductPolicy
      * @param  \App\Product  $product
      * @return mixed
      */
+
+    //Restriccion SOLO para administradores! 
     public function update(User $user, Product $product)
     {
         return $user->isAdmin();

@@ -116,7 +116,7 @@
 
   <div class="pro bg-inherit mr-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center overflow-hidden">
     <div class="pro my-3 p-3">
-      <img src="/storage/images/lenovo.jpg" class="img-fluid w-50 h-50" alt="compu">
+      <img src="/storage/images/fotoDH/lenovo.jpg" class="img-fluid w-50 h-50" alt="compu">
       <br><br>
       <a class="btn btn-outline-secondary" href="{{ url('/categoria/2/computadoras') }}">Computadoras</a>
     </div>

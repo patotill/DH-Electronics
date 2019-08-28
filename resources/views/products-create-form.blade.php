@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'Crear un producto')
+
 @section('customStyles')
 <link rel="stylesheet" href="/css/styles-register.css">
 @endsection
+
 @section('content')
 
 <div class="register-container">
@@ -61,14 +63,18 @@
 						<p style="color: red;">{{ $errors->first('stock') }}</p>
 					@enderror
 
+          <label for ="image">Imagen</label>
+          <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple  />
+          <label for="file"><strong>Subir imagen</strong></label>
 
-						<label for ="image">Imagen</label>
-						<input class="btn btn-outline-success" name="image" type="file">
+
+
 
 
 					@error ('image')
 						<p style="color: red;">{{ $errors->first('image') }}</p>
 					@enderror
+
 
 
 					<label for ="categoria">marcas</label>
@@ -86,8 +92,10 @@
 					</select>
 
 
-
+<br>
 		<button type="submit" class="btn btn-success">Guardar</button>
 	</form>
-	 </div>
+</div>
+
+
 	@endsection
