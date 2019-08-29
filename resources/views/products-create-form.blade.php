@@ -13,7 +13,7 @@
     <i class="fab fa-digital-ocean"></i>
   </p>
 
-	<h2>Formulario para crear productos</h2>
+	<h2 class="text-center">Crear productos</h2>
 
 	@if ($errors)
 		@foreach ($errors->all() as $oneError)
@@ -63,13 +63,10 @@
 						<p style="color: red;">{{ $errors->first('stock') }}</p>
 					@enderror
 
+
           <label for ="image">Imagen</label>
-          <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple  />
-          <label for="file"><strong>Subir imagen</strong></label>
-
-
-
-
+          <input type="file" name="file" id="file" class="inputfile"/>
+          <label for="file"><strong class="btn btn-outline-success">Subir imagen</strong></label>
 
 					@error ('image')
 						<p style="color: red;">{{ $errors->first('image') }}</p>
@@ -77,7 +74,7 @@
 
 
 
-					<label for ="categoria">marcas</label>
+					<label for ="categoria">Marcas</label>
 					<select class="form-control" name="category_id">
 						@foreach ($brands as $brand)
 							<option value="{{ $brand->id }}"> {{ $brand->name }} </option>
@@ -93,7 +90,9 @@
 
 
 <br>
+
 		<button type="submit" class="btn btn-success">Guardar</button>
+
 	</form>
 </div>
 

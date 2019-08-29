@@ -163,17 +163,15 @@ footer {
   margin: 15px 20px;
   box-shadow: 0 0 0 1px #26bbae;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.contItems .boton .btn{
+/* .buy-zone .boton .btn{
 border-color:rgb(249,161,97) ;
 color:rgb(249,161,97) ;
-}
+} */
 
-.desc-zone{
-  justify-content: center;
+.prod-caja, .contItems{
+   justify-content: center;
   align-items: center;
 }
 .prices{
@@ -190,16 +188,11 @@ color:rgb(249,161,97) ;
 	z-index: -1;
 }
 .inputfile + label {
-    text-align: center;
     display: flex;
     cursor: pointer;
-    border-style:solid;
-    border: 1px solid;
-    border-radius: 15px;
-
 }
 
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background-color: white;
+
+.boton-show{
+  margin: 0 130px;
 }
