@@ -29,14 +29,12 @@
 	<div class="boton boton-show text-center d-md-flex flex-md-equal">
 		<div class="col-md-4">
 			<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-
 			 <option selected>Cantidad</option>
 				 <option value="{{ $productToShow->stock }}">
 					 <option value="{{ $productToShow->stock }}">
 					 {{ $productToShow->stock }}
 				 	</option>
 				 </option>
-
 		 </select>
 
 

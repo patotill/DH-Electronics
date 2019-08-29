@@ -39,12 +39,14 @@
 
       <!-- PAIS DE NACIMIENTO -->
     	<label for="country">País de nacimiento</label>
-        <select class="form-control @error('country') is-invalid @enderror" name="country">
+
+        <select class="form-control @error('country') is-invalid @enderror" name="country" {{ old('country') }}>
     			 <option value="">Elegí un país</option>
     			 <option value="Argentina">Argentina</option>
     			 <option value="Brasil">Brasil</option>
     			 <option value="Colombia">Colombia</option>
     	  </select>
+    
 
     		@error('country')
     		<span class="invalid-feedback" role="alert">

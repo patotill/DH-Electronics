@@ -179,7 +179,7 @@ color:rgb(249,161,97) ;
   font-weight: bold;
 }
 /* boton SUBIR IMAGENES */
-.inputfile {
+/* .inputfile {
 	width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
@@ -187,7 +187,7 @@ color:rgb(249,161,97) ;
 	position: absolute;
 	z-index: -1;
 }
-.inputfile + label {
+.inputfile + label, {
     display: flex;
     cursor: pointer;
 }
@@ -195,4 +195,4 @@ color:rgb(249,161,97) ;
 
 .boton-show{
   margin: 0 130px;
-}
+} */
