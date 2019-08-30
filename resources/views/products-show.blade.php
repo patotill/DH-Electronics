@@ -32,7 +32,7 @@
 			 <option selected>Cantidad</option>
 				 <option value="{{ $productToShow->stock }}">
 					 <option value="{{ $productToShow->stock }}">
-					 {{ $productToShow->stock }}
+					 <!-- {{ $productToShow->stock }} -->
 				 	</option>
 				 </option>
 		 </select>

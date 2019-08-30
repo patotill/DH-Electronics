@@ -192,7 +192,8 @@ color:rgb(249,161,97) ;
     cursor: pointer;
 }
 
-
+*/
 .boton-show{
-  margin: 0 130px;
-} */
+  margin: 0 80px;
+  padding:0 30px;
+}
