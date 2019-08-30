@@ -128,7 +128,8 @@ class ProductsController extends Controller
       $this->authorize('update', $productToEdit);
 
       $categories = Category::orderBy('id')->get();
-      return view('products-edit-form', compact('productToEdit', 'categories'));
+      $brands = Brand::orderBy('id')->get();
+      return view('products-edit-form', compact('productToEdit', 'categories', 'brands'));
     }
 
 
@@ -142,6 +143,16 @@ class ProductsController extends Controller
 			$productToUpdate->category_id = $request->input('category_id');
       $productToUpdate->stock = $request->input('stock');
       $productToUpdate->brand_id = $request->input('brand_id');
+
+
+      // $nombreImagen = uniqid('img-') . '.' . $image->extension();
+      // $image->storePubliclyAs('public/', $nombreImagen);
+
+      if ($request->hasFile('image')) {
+        $productToUpdate->image = $request->file('image')->store('public/images/fotosDH');
+      }
+
+      $productToUpdate->save();
 
 
 			$saved = $productToUpdate->save();

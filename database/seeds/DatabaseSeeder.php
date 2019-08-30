@@ -11,6 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+      // $brands = [];
+      //
+      // foreach ($brands as $brand) {
+      //   DB::table('brands')->insert(['name' => $brand]);
+      // }
 //
 
 //MARCAS
