@@ -65,9 +65,6 @@
   </div>
 
 
-
-
-
   <div class="col-6">
     <div class="form-group">
 	     <label for="stock">Stock</label>
@@ -81,8 +78,8 @@
 
   <div class="col-6">
     <div class="form-group">
-		<label for ="categoria">Marcas</label>
-		<select class="form-control" name="category_id">
+		<label for ="brand">Marcas</label>
+		<select class="form-control" name="brand_id">
 		@foreach ($brands as $brand)
 			<option value="{{ $brand->id }}"> {{ $brand->name }} </option>
 		@endforeach

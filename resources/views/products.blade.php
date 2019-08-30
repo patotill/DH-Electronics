@@ -16,7 +16,7 @@
   <div class="img-zone col-md-4 text-center overflow-hidden">
     <div class="padding js-displayHoverImg">
       <a name="image" class="itemImg" href="#">
-        <img src="/storage/images/fotosDH/{{ $product->image }}" class="img-fluid rounded w-50 h-50" alt="#">
+        <img src="{{ Storage::url($product->image) }}" class="img-fluid rounded w-50 h-50" alt="#">
       </a>
     </div>
   </div>
