@@ -78,6 +78,18 @@
 				</div>
 			</div>
 
+
+        <div class="col-6">
+          <div class="form-group">
+      		<label for ="brand">Marcas</label>
+      		<select class="form-control" name="brand_id">
+      		@foreach ($brands as $brand)
+      			<option value="{{ $brand->id }}"> {{ $brand->name }} </option>
+      		@endforeach
+      		</select>
+          </div>
+        </div>
+
 			<div class="col-6">
 				<div class="form-group">
 					<label>Categoria</label>
@@ -85,7 +97,7 @@
 						@foreach ($categories as $oneCategory)
 							<option
 								value="{{ $oneCategory->id }}"
-								{{ $productToEdit->category_id == $oneCategory->id ? 'selected' : null }}
+								{{ $productToEdit->category_id == $oneCategory->id ? 'selected' : '' }}
 							> {{ $oneCategory->name }} </option>
 						@endforeach
 					</select>
