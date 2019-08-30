@@ -30,11 +30,13 @@
 		<div class="col-md-4">
 			<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
 			 <option selected>Cantidad</option>
-				 <option value="{{ $productToShow->stock }}">
+				
+					 @for( $i=0 ; $i <= $productToShow->stock; $i++ )
 					 <option value="{{ $productToShow->stock }}">
-					 <!-- {{ $productToShow->stock }} -->
-				 	</option>
-				 </option>
+						{{ $i }}
+					 </option>
+					@endfor
+
 		 </select>
 
 

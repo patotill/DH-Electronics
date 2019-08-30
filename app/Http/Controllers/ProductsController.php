@@ -59,17 +59,10 @@ class ProductsController extends Controller
  			$productSaved = Product::create($formNewProd->all());
 
 			// Pedimos el campo que tiene la imagen
-			$image = $formNewProd->file('image');
+			$image = $formNewProd->file('image')->store('public/images/fotosDH');
 
-			// Armamos un nombre para la imagen
-			$nombreImagen = uniqid('img-') . '.' . $image->extension();
-
-			// Subir la imagen a la carpeta final
-			$image->storePubliclyAs('public/images/fotosDH', $nombreImagen);
-			// Recordar que la imagen se sube en storage/app/public/posters
-
-			// Después de subir la imagen, vamos a asociarle a la columna poster de la película recién creada, el nombre de la imagen que subimos
-			$productSaved->image = $nombreImagen;
+			$productSaved->image = $image;
+      
 			$productSaved->save();
 
 
