@@ -31,9 +31,9 @@ Route::get('/faq', function () {
 Route::get('/categoria/{id}/{name}', 'ProductsController@category');
 
 
-Route::get('cart', 'ProductsController@cart');
+Route::get('cart', 'CartsController@show');
 
-Route::get('add-to-cart/{id}', 'ProductsController@addToCart');
+Route::get('add-to-cart/{id}', 'CartsController@store');
 
 Auth::routes();
 
