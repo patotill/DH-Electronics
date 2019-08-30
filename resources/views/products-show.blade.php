@@ -68,7 +68,7 @@
 
 </form>
 
-<a href={{ URL::previous() }} class="btn btn-success" style="margin-left: 10px">Volver atras</a>
+<a href='/categoria/{{ $productToShow->category->id }}/{{ $productToShow->category->name }}' class="btn btn-success" style="margin-left: 10px">Volver atras</a>
 
 
 
