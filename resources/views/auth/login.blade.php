@@ -6,6 +6,9 @@
 
 @section('content')
 
+<p class='alert alert-danger text-center'>{{ session()->get('mensaje') }}</p>
+
+
   <div class="login-container">
     <p style="text-align: center;"><i class="fab fa-digital-ocean"></i></p>
     <h1>Bienvenido a DH Electronics</h1>

@@ -36,15 +36,22 @@ class CartsController extends Controller
      */
     public function store(Request $request, $id)
     {
-        $cart = Cart::create([
-            'user_id' => auth()->id(),
-            'items' => 0,
-        ]);
-        $product = Product::find($id);
-        $cart->products()->attach($id, ['price' => $product->price]);
         
-        //$productSaved = Product::store($cart->all());
+
+        if (!auth()->id()) {   
+        
+        return redirect()->route('login')->with(['mensaje'=>'Para comprar, debe loguearse']);
+
+        } else  {
+        $cart = session()->get('cart');
+        $product = Product::find($id);
+        $cart->products()->attach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price * $product->items)]);
+
+        return view('cart', compact('cart', 'product'));
+
+        }
     }
+    
 
     /**
      * Display the specified resource.
@@ -52,9 +59,10 @@ class CartsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        return view('cart');
+        $cart = session()->get('cart');
+        return view('cart', compact('cart'));
     }
 
     /**
@@ -88,6 +96,7 @@ class CartsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        $cart->products()->detach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price * $product->items)]);
     }
 }

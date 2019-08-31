@@ -1,18 +1,18 @@
 
 Agregar relaciones
 	Cart - belongsToMany - Products
-	Product - belongsToMany - Cart
+	Product - belongsToMany - Cart      ++
 
 Crear un controller CartController
 
 Tiene 4 acciones
 - index - listar las compras que ya hizo el usuario
-- show - detalle del carrito actual
+- show - detalle del carrito actual -- 
 - create - no
-- store - agregar el producto
+- store - agregar el producto ++
 - edit
-- update - actualizar en el carrito
-- destroy - borrar un producto del carrito
+- update - actualizar en el carrito --
+- destroy - borrar un producto del carrito --
 
 
 

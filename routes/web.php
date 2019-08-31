@@ -31,7 +31,7 @@ Route::get('/faq', function () {
 Route::get('/categoria/{id}/{name}', 'ProductsController@category');
 
 
-Route::get('cart', 'CartsController@show');
+Route::get('cart/{id}', 'CartsController@show')->middleware('cart');
 
 Route::get('add-to-cart/{id}', 'CartsController@store');
 
