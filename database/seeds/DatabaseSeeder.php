@@ -12,15 +12,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-      // $brands = [];
-      //
-      // foreach ($brands as $brand) {
-      //   DB::table('brands')->insert(['name' => $brand]);
-      // }
-//
+      
+
 
 //MARCAS
-        DB::table('brands')->insert([
+
+        $brands = ['Apple', 'Sony', 'Xiaomi', 'Google', 'Microsoft', 'Nikon', 'Nintendo', 'Bose', 'Samsung', 'Lenovo', 'Asus', 'Dji', 'Ultimate Ears'];
+      
+        foreach ($brands as $brand) {
+          DB::table('brands')->insert(['name' => $brand]);
+        }
+
+        /*DB::table('brands')->insert([
         	'name'=> 'apple'
         ]);
         DB::table('brands')->insert([
@@ -55,9 +58,16 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('brands')->insert([
           'name'=> 'dji'
-        ]);
+        ]);*/
 // CATEGORIAS
-        DB::table('categories')->insert([
+
+        $categories = ['foto', 'computadoras', 'audio', 'mobile', 'tv', 'accesorios'];
+      
+        foreach ($categories as $categorie) {
+          DB::table('categories')->insert(['name' => $categorie]);
+        }
+
+        /*DB::table('categories')->insert([
         	'name'=> 'foto'
         ]);
         DB::table('categories')->insert([
@@ -74,10 +84,14 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('categories')->insert([
         	'name'=> 'accesorios'
-        ]);
+        ]);*/
+
+
 // PRODUCTOS
-  //Fotografia
+
         $storage = 'public/images/fotosDH/';
+
+        
 
         DB::table('products')->insert([
           'name'=> 'Nikon D7500 DSLR (solo cuerpo)',
@@ -187,8 +201,9 @@ class DatabaseSeeder extends Seeder
           'image'=> $storage . 'wonderboom.jpg',
           'category_id'=>'3',
           'stock'=>'10',
+          'brand_id'=>'13',
           'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
-          ,
+          
         ]);
         DB::table('products')->insert([
           'name'=> 'Bose SoundLink Micro Bluetooth',

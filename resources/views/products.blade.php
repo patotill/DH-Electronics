@@ -51,7 +51,7 @@
 
     <div class="prices"><span class="price-you-pay bold">$ {{ $product->price }}</span></div>
     <br>
-    <div class="boton text-center"><a class="btn btn-outline-secondary" href="{{ url('') }}">Agregar al carrito</a></div>
+    <div class="boton text-center"><a class="btn btn-outline-secondary" href="/add-to-cart/{{ $product->id }}">Agregar al carrito</a></div>
 		<br>
     <div class="boton text-center"><a class="btn btn-outline-secondary" href="/products/{{ $product->id }}" role="button">Ver detalle</a></div>
   </div>

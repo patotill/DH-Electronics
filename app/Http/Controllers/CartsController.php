@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Cart;
 use App\Product;
+use App\User;
 
 class CartsController extends Controller
 {
@@ -36,17 +37,25 @@ class CartsController extends Controller
      */
     public function store(Request $request, $id)
     {
-        
-
         if (!auth()->id()) {   
         
         return redirect()->route('login')->with(['mensaje'=>'Para comprar, debe loguearse']);
 
-        } else  {
-        $cart = session()->get('cart');
+        } elseif (!session()->has('cart')) {
+        
+        $cart = Cart::create();
+        
+        $cart = session()->put('cart', $cart);
         $product = Product::find($id);
-        $cart->products()->attach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price * $product->items)]);
+        
+        /*$cart->products()->attach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price)]);*/
 
+        return view('cart', compact('cart', 'product'));
+
+        } else {
+        $product = Product::find($id);
+        $cart = session()->get('cart');
+        $cart->products()->attach($id, ['items'=>1,'product_price' => $product->price, 'total_price'=> ($product->price)]);
         return view('cart', compact('cart', 'product'));
 
         }
@@ -59,10 +68,11 @@ class CartsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         $cart = session()->get('cart');
-        return view('cart', compact('cart'));
+        $product = Product::find('all');
+        return view('cart', compact('cart', 'product'));
     }
 
     /**
@@ -96,7 +106,7 @@ class CartsController extends Controller
      */
     public function destroy($id)
     {
-        $product = Product::find($id);
-        $cart->products()->detach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price * $product->items)]);
+        /*$product = Product::find($id);
+        $cart->products()->detach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price * $product->items)]);*/
     }
 }
