@@ -6,13 +6,7 @@
 
   {{ isset($_GET['borrar']) ? $_GET['borrar'] : null }}
 
-
-  @if(session('crea'))
-  	<p class="alert alert-success">El producto ha sido creado</p>
-  @endif
-
 <div class="containerProductos" id="containerProductos" style="">
-
 
 
 @foreach ($products as $product)
