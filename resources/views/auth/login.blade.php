@@ -6,7 +6,11 @@
 
 @section('content')
 
-<p class='alert alert-danger text-center'>{{ session()->get('mensaje') }}</p>
+
+@if(session('mensaje'))
+	<p class="alert alert-danger text-center">Debe loguearse para iniciar una compra!</p>
+@endif
+
 
 
   <div class="login-container">

@@ -8,6 +8,7 @@
 
 @section('content')
 
+
 <div class="register-container" style="width: auto; margin: 20px 40px">
   <p style="text-align: center;">
     <i class="fab fa-digital-ocean"></i>

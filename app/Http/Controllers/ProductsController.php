@@ -63,7 +63,7 @@ class ProductsController extends Controller
 			$image = $formNewProd->file('image')->store('public/images/fotosDH');
 
 			$productSaved->image = $image;
-      
+
 			$productSaved->save();
 
 
@@ -92,10 +92,10 @@ class ProductsController extends Controller
         public function destroy($id)
         {
           $productToDelete = Product::find($id);
-          $productToDelete->delete();
+          $delete = $productToDelete->delete();
 
            return redirect()->route('home')->with([
-             'msj'=>'El producto ha sido eliminado satisfactoriamente'
+             'delete'=> $delete
            ]);
 
           // <a href={{ URL::previous() }} class="btn btn-success">Volver atras</a>
@@ -153,7 +153,6 @@ class ProductsController extends Controller
 
       return redirect()->route('productShow', $id)->with([
         'saved' => $saved,
-        'msj'=>'El producto ha sido eliminado satisfactoriamente'
       ]);
 			// return redirect('/products');
     }

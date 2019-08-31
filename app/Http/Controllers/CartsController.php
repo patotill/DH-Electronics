@@ -37,17 +37,18 @@ class CartsController extends Controller
      */
     public function store(Request $request, $id)
     {
-        if (!auth()->id()) {   
-        
-        return redirect()->route('login')->with(['mensaje'=>'Para comprar, debe loguearse']);
+        if (!auth()->id()) {
+
+        $mensaje = true;
+        return redirect()->route('login')->with(['mensaje'=> $mensaje]);
 
         } elseif (!session()->has('cart')) {
-        
+
         $cart = Cart::create();
-        
+
         $cart = session()->put('cart', $cart);
         $product = Product::find($id);
-        
+
         /*$cart->products()->attach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price)]);*/
 
         return view('cart', compact('cart', 'product'));
@@ -60,7 +61,7 @@ class CartsController extends Controller
 
         }
     }
-    
+
 
     /**
      * Display the specified resource.

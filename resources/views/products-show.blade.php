@@ -2,11 +2,9 @@
 @section('title', $productToShow->name)
 @section('content')
 
-
 @if(session('saved'))
-	<p class="alert alert-success">El producto ha sido guardado</p>
+	<p class = 'alert alert-success text-center'>El producto ha sido editado correctamente</p>
 @endif
-
 <div class="col-md-12" style="margin-left: 10px" >
 <h3 class="text-left">{{ $productToShow->name }}</h3>
 </div>
@@ -30,7 +28,7 @@
 		<div class="col-md-4">
 			<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
 			 <option selected>Cantidad</option>
-				
+
 					 @for( $i=0 ; $i <= $productToShow->stock; $i++ )
 					 <option value="{{ $productToShow->stock }}">
 						{{ $i }}

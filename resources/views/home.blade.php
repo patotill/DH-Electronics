@@ -4,8 +4,10 @@
 @section('content')
 
 <!-- Carousel -->
-
 <main role="main">
+  @if(session('delete'))
+    <p class ="alert alert-success text-center">El producto ha sido eliminado</p>
+  @endif
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -57,8 +59,6 @@
 
 
 <!-- PRODUCTOS -->
-{{ session()->get('msj') }}
-
 
 <div id="centerRegionContainer" class="centerRegionContainer ">
 
