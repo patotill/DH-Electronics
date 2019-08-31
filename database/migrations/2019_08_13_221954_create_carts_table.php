@@ -17,8 +17,8 @@ class CreateCartsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('items');
-            $table->decimal('price', 8, 2);
+            $table->integer('items')->default(1);
+            $table->decimal('price', 8, 2)->default(1);
             $table->timestamps();
         });
     }

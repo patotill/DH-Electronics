@@ -19,9 +19,9 @@ class CreateCartProductTable extends Migration
             $table->foreign('product_id')->references('id')->on('products');
             $table->unsignedBigInteger('cart_id')->nullable();
             $table->foreign('cart_id')->references('id')->on('carts');
-            $table->integer('items');
-            $table->decimal('product_price', 8, 2);
-            $table->decimal('total_price', 8, 2);
+            $table->integer('items')->default(1);
+            $table->decimal('product_price', 8, 2)->default(1);
+            $table->decimal('total_price', 8, 2)->default(1);
             $table->timestamps();
         });
     }
