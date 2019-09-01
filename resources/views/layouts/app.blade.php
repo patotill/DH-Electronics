@@ -124,7 +124,7 @@
        <button class="btn btn-primary my-2 my-sm-0 mr-1" type="submit">
          <i class="fas fa-search"></i>
        </button>
-       <a href="cart">
+       <a href="/cart">
          <i class="fas fa-shopping-cart" ></i>
        </a>
      </form>

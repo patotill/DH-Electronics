@@ -69,7 +69,7 @@ class CartsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Request $request)
     {
       if (!auth()->id()) {
 
@@ -79,7 +79,7 @@ class CartsController extends Controller
     } else {
 
         $cart = session()->get('cart');
-        $product = Product::all();
+        $product = Product::find($request);
         return view('cart', compact('cart', 'product'));
     }
     }
