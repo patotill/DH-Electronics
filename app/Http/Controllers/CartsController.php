@@ -71,11 +71,18 @@ class CartsController extends Controller
      */
     public function show()
     {
+      if (!auth()->id()) {
+
+      $mensaje = true;
+      return redirect()->route('login')->with(['mensaje'=> $mensaje]);
+
+    } else {
+
         $cart = session()->get('cart');
-        $product = Product::find('all');
+        $product = Product::all();
         return view('cart', compact('cart', 'product'));
     }
-
+    }
     /**
      * Show the form for editing the specified resource.
      *
