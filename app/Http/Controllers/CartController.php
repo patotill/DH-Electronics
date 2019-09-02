@@ -7,7 +7,7 @@ use App\Cart;
 use App\Product;
 use App\User;
 
-class CartsController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -37,23 +37,22 @@ class CartsController extends Controller
      */
     public function store(Request $request, $id)
     {
-        if (!auth()->id()) {
 
-        $mensaje = true;
-        return redirect()->route('login')->with(['mensaje'=> $mensaje]);
+      if (!session()->has('cart')) {
 
-        } elseif (!session()->has('cart')) {
+      $cart = Cart::create([
+        'user_id' => auth()->id(),
+        'items' => 0,
+        'price' => 0
+    ]);
 
-        $cart = Cart::create();
+      $cart = session()->put('cart', $cart);
+      $product = Product::find($id);
 
-        $cart = session()->put('cart', $cart);
-        $product = Product::find($id);
+      /*$cart->products()->attach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price)]);*/
 
-        /*$cart->products()->attach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price)]);*/
-
-        return view('cart', compact('cart', 'product'));
-
-        } else {
+      return view('cart', compact('cart', 'product'));
+    }else{
         $product = Product::find($id);
         $cart = session()->get('cart');
         $cart->products()->attach($id, ['items'=>1,'product_price' => $product->price, 'total_price'=> ($product->price)]);
@@ -71,17 +70,10 @@ class CartsController extends Controller
      */
     public function show(Request $request)
     {
-      if (!auth()->id()) {
-
-      $mensaje = true;
-      return redirect()->route('login')->with(['mensaje'=> $mensaje]);
-
-    } else {
-
         $cart = session()->get('cart');
         $product = Product::find($request);
         return view('cart', compact('cart', 'product'));
-    }
+
     }
     /**
      * Show the form for editing the specified resource.

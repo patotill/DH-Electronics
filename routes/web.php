@@ -30,10 +30,9 @@ Route::get('/faq', function () {
 
 Route::get('/categoria/{id}/{name}', 'ProductsController@category');
 
+Route::get('cart', 'CartController@show')->middleware('carrito');
 
-Route::get('cart', 'CartsController@show')->middleware('carrito');
-
-Route::get('add-to-cart/{id}', 'CartsController@store');
+Route::get('add-to-cart/{id}', 'CartController@store')->middleware('carrito');
 
 Auth::routes();
 
