@@ -22,7 +22,17 @@
 									<div class="col-sm-2 hidden-xs"></div>
 									<div class="col-sm-10">
 										<h4 class="nomargin"></h4>
-										<p></p>
+
+										{{--  @foreach (session()->get('cart') as $product) --}}
+
+												<p>
+													<span item="name">{{ $product->name }}</span>
+													<span item="price">{{ $product->price }}</span>
+													<img src="{{ Storage::url($product->image) }}" class="rounded mx-auto d-block" width="60" height="60" alt="#">
+												</p>
+
+										{{-- @endforeach --}}
+
 									</div>
 								</div>
 							</td>
