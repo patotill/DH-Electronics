@@ -10,26 +10,6 @@ use App\User;
 class CartController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -37,28 +17,20 @@ class CartController extends Controller
      */
     public function store(Request $request, $id)
     {
-
-      if (!session()->has('cart')) {
-
-      $cart = Cart::create([
-        'user_id' => auth()->id(),
-        'items' => 0,
-        'price' => 0
-    ]);
-
-      $cart = session()->put('cart', $cart);
+  
       $product = Product::find($id);
 
-      /*$cart->products()->attach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price)]);*/
+      $cart = session('cart');
 
-      return view('cart', compact('cart', 'product'));
-    }else{
-        $product = Product::find($id);
-        $cart = session()->get('cart');
-        $cart->products()->attach($id, ['items'=>1,'product_price' => $product->price, 'total_price'=> ($product->price)]);
-        return view('cart', compact('cart', 'product'));
+      $cart->products()->attach($id, [
+       'items'=>1,
+       'product_price' => $product->price,
+       'total_price'=> $product->price
+      ]);
 
-        }
+      session()->put('cart', $cart->fresh());
+
+      return redirect('/cart');
     }
 
 
@@ -70,10 +42,9 @@ class CartController extends Controller
      */
     public function show(Request $request)
     {
-        $cart = session()->get('cart');
-        $product = Product::find($request);
-        return view('cart', compact('cart', 'product'));
+       $cart = session()->get('cart')->fresh();
 
+       return view('cart', compact('cart'));
     }
     /**
      * Show the form for editing the specified resource.
@@ -81,9 +52,16 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function edit($id)
     {
-        //
+      $cart = session()->get('cart');
+
+      $product = $cart->products->where('id', $id)->first();
+
+      return view('cart-edit-form', compact('product'));
     }
 
     /**
@@ -95,7 +73,19 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $cart = session()->get('cart');
+
+      $product = $cart->products->where('id', $id)->first();
+
+      $cart->products()->syncWithoutDetaching([$id => [
+        'items' => $request->get('quantity'),
+        'total_price' => $request->get('quantity') * $product->price,
+      ]
+      ]);
+
+      session()->put('cart', $cart);
+
+      return redirect('/cart');
     }
 
     /**
@@ -106,7 +96,9 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        /*$product = Product::find($id);
-        $cart->products()->detach($id, ['items'=>2,'product_price' => $product->price, 'total_price'=> ($product->price * $product->items)]);*/
+        $cart = session()->get('cart');
+        $product = Product::find($id);
+        $cart->products()->detach($id);
+        return redirect('/cart');
     }
 }

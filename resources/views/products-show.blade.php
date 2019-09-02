@@ -26,22 +26,29 @@
 	<br>
 	<div class="boton boton-show text-center d-md-flex flex-md-equal">
 		<div class="col-md-4">
-			<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-			 <option selected>Cantidad</option>
+			<form method = "post" action = "/cart/edit/{{$productToShow->id}}">
+				@csrf
 
-					 @for( $i=0 ; $i <= $productToShow->stock; $i++ )
+			<select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name = "stock">
+			 <option >Cantidad</option>
+					 @for( $i=0 ; $i <= $productToShow->stock; $i++)
 					 <option value="{{ $productToShow->stock }}">
 						{{ $i }}
 					 </option>
 					@endfor
 
 		 </select>
-
+		 <button class="" >Actualizar</button>
+</form>
 
 		</div>
 		<div class="col-md-8">
+		@if($selectedProductsId->contains($productToShow->id))
+			<a class="btn btn-outline-info" href="/cart/{{ $productToShow->id }}">Actualizar</a>
+		@else
 			<a class="btn btn-outline-info" href="/add-to-cart/{{ $productToShow->id }}">Agregar al carrito</a>
-		</div>
+		@endif
+			</div>
 	</div>
 	<br>
 	@can('update', $productToShow)

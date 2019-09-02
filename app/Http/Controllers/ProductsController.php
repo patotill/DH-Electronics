@@ -78,9 +78,12 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
+
+        $selectedProductsId = session('cart')->products->pluck('id');
         $productToShow = Product::find($id);
-  			return view('products-show', compact('productToShow'));
+  			return view('products-show', compact('productToShow', 'selectedProductsId'));
     }
+
 
 
         /**
@@ -131,12 +134,12 @@ class ProductsController extends Controller
     {
       $productToUpdate = Product::find($id);
 
-			$productToUpdate->name = $request->input('name');
-			$productToUpdate->price = $request->input('price');
-			$productToUpdate->description = $request->input('description');
-			$productToUpdate->category_id = $request->input('category_id');
-      $productToUpdate->stock = $request->input('stock');
-      $productToUpdate->brand_id = $request->input('brand_id');
+			// $productToUpdate->name = $request->input('name');
+			// $productToUpdate->price = $request->input('price');
+			// $productToUpdate->description = $request->input('description');
+			// $productToUpdate->category_id = $request->input('category_id');
+      // $productToUpdate->stock = $request->input('stock');
+      // $productToUpdate->brand_id = $request->input('brand_id');
 
 
       // $nombreImagen = uniqid('img-') . '.' . $image->extension();
@@ -146,10 +149,7 @@ class ProductsController extends Controller
         $productToUpdate->image = $request->file('image')->store('public/images/fotosDH');
       }
 
-      $productToUpdate->save();
-
-
-			$saved = $productToUpdate->save();
+			$saved = $productToUpdate->update($request->all());
 
       return redirect()->route('productShow', $id)->with([
         'saved' => $saved,
