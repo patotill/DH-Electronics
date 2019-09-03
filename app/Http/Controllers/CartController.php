@@ -17,7 +17,7 @@ class CartController extends Controller
      */
     public function store(Request $request, $id)
     {
-  
+
       $product = Product::find($id);
 
       $cart = session('cart');
@@ -58,7 +58,7 @@ class CartController extends Controller
     public function edit($id)
     {
       $cart = session()->get('cart');
-
+      
       $product = $cart->products->where('id', $id)->first();
 
       return view('cart-edit-form', compact('product'));

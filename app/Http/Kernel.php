@@ -61,7 +61,8 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'usuarioAdmin' => \App\Http\Middleware\usuarioAdmin::class,
-        'carrito' => \App\Http\Middleware\carrito::class
+        'carrito' => \App\Http\Middleware\carrito::class,
+        'CarritoAuth' => \App\Http\Middleware\CarritoAuth::class
     ];
 
     /**

@@ -78,10 +78,10 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-
-        $selectedProductsId = session('cart')->products->pluck('id');
+        $cart = session()->get('cart');
+        $selectedProductsId = $cart->products->pluck('id');
         $productToShow = Product::find($id);
-  			return view('products-show', compact('productToShow', 'selectedProductsId'));
+        return view('products-show', compact('productToShow', 'selectedProductsId'));
     }
 
 
@@ -133,17 +133,6 @@ class ProductsController extends Controller
     public function update(Request $request, $id)
     {
       $productToUpdate = Product::find($id);
-
-			// $productToUpdate->name = $request->input('name');
-			// $productToUpdate->price = $request->input('price');
-			// $productToUpdate->description = $request->input('description');
-			// $productToUpdate->category_id = $request->input('category_id');
-      // $productToUpdate->stock = $request->input('stock');
-      // $productToUpdate->brand_id = $request->input('brand_id');
-
-
-      // $nombreImagen = uniqid('img-') . '.' . $image->extension();
-      // $image->storePubliclyAs('public/', $nombreImagen);
 
       if ($request->hasFile('image')) {
         $productToUpdate->image = $request->file('image')->store('public/images/fotosDH');

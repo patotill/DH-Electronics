@@ -25,31 +25,22 @@
 	<div class="prices"><span class="price-you-pay bold">$ {{ $productToShow->price }}</span></div>
 	<br>
 	<div class="boton boton-show text-center d-md-flex flex-md-equal">
-		<div class="col-md-4">
-			<form method = "post" action = "/cart/edit/{{$productToShow->id}}">
-				@csrf
 
-			<select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name = "stock">
-			 <option >Cantidad</option>
-					 @for( $i=0 ; $i <= $productToShow->stock; $i++)
-					 <option value="{{ $productToShow->stock }}">
-						{{ $i }}
-					 </option>
-					@endfor
-
-		 </select>
-		 <button class="" >Actualizar</button>
-</form>
-
-		</div>
 		<div class="col-md-8">
+
+		@auth
 		@if($selectedProductsId->contains($productToShow->id))
-			<a class="btn btn-outline-info" href="/cart/{{ $productToShow->id }}">Actualizar</a>
+		<form method = "get" action = "/cart/edit/{{ $productToShow->id }}" >
+			 @csrf
+		<button class="btn btn-info btn-sm"><i class="fas fa-edit"></i></button>
+		</form>
 		@else
 			<a class="btn btn-outline-info" href="/add-to-cart/{{ $productToShow->id }}">Agregar al carrito</a>
 		@endif
-			</div>
+		@endauth
+		</div>
 	</div>
+
 	<br>
 	@can('update', $productToShow)
 		<form action="/products/destroy/{{ $productToShow->id }}" method="post" style="display: inline-block;">
