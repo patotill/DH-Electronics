@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/products', 'ProductsController@index');
-Route::get('/products/create', 'ProductsController@create');
+Route::get('/products', 'ProductsController@index')->middleware('carrito');
+Route::get('/products/create', 'ProductsController@create')->middleware('auth');
 Route::post('/products/store', 'ProductsController@store');
-Route::get('/products/{id}', 'ProductsController@show')->middleware('CarritoAuth');
+Route::get('/products/{id}', 'ProductsController@show');
 Route::delete('/products/destroy/{id}', 'ProductsController@destroy');
 Route::get('/products/edit/{id}', 'ProductsController@edit');
 Route::post('/products/{id}', 'ProductsController@update');
@@ -32,7 +32,7 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/categoria/{id}/{name}', 'ProductsController@category');
+Route::get('/categoria/{id}/{name}', 'ProductsController@category')->middleware('carrito');
 
 Route::get('cart', 'CartController@show')->middleware('carrito');
 Route::get('add-to-cart/{id}', 'CartController@store')->middleware('auth', 'carrito');
@@ -57,13 +57,3 @@ Route::group(['middleware' => 'usuarioAdmin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::middleware('auth:api')->group( function(){
-
-  Route::get('/tasks', 'Api\TaskController@index')->name('api.tasks');
-
-  Route::post('/tasks', 'Api\TaskController@store')->name('api.tasks.store');
-
-  Route::post('/tasks/{id}/complete', 'Api\TaskController@complete')->name('api.tasks.complete');
-
-});

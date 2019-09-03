@@ -50,4 +50,3 @@
   @endforeach
 
 @endsection
-<!-- <script src="js/categorias.js"></script> -->

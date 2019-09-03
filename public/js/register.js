@@ -5,6 +5,7 @@ var countriesField = document.querySelector ('select[name = country]');
  .then(response => response.json())
 
  .then(function (data){
+   console.log(data)
    for(country in data){
      var opt = document.createElement('option');
      opt.innerHTML = data[country];
@@ -22,7 +23,8 @@ var stateField = document.querySelector ('select[name = state]');
 
  .then(response => response.json())
  .then(function (todaLaData){
-   for (var i=0; i < todaLaData.data.length; i++){
+   console.log(todaLaData)
+   for (var i = 0; i < todaLaData.data.length; i++){
      var opt = document.createElement('option');
      opt.value = i;
      opt.innerHTML = todaLaData.data[i].state;

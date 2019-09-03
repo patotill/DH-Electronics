@@ -81,8 +81,11 @@ class ProductsController extends Controller
         $cart = session()->get('cart');
         $selectedProductsId = $cart->products->pluck('id');
         $productToShow = Product::find($id);
-        return view('products-show', compact('productToShow', 'selectedProductsId'));
+        return view('products-show', compact('productToShow', 'selectedProductsId','cart'));
+
     }
+
+
 
 
 

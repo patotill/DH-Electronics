@@ -86,7 +86,7 @@ class RegisterController extends Controller
 
       $this->authorize('update', $userToEdit);
 
-      
+
       return view('profile-edit-form', compact('userToEdit'));
     }
 }

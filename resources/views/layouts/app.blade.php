@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
 
 
     <!-- CSRF Token -->
@@ -66,7 +66,7 @@
         @endif
         @else
         <li class="nav-item dropdown">
-          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+          <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: black" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
             {{ Auth::user()->name }} <span class="caret"></span>
           </a>
 
@@ -123,16 +123,10 @@
      </ul>
 
        <!-- search button - carrito -->
-
-     <form class="form-inline justify-content-center my-2 my-lg-0">
-       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-       <button class="btn btn-primary my-2 my-sm-0 mr-1" type="submit">
-         <i class="fas fa-search"></i>
-       </button>
        <a href="/cart">
          <i class="fas fa-shopping-cart" ></i>
        </a>
-     </form>
+
   </div>
 </nav>
 

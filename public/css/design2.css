@@ -19,6 +19,12 @@ body {
 	font-size: 20px;
 }
 
+.fa-shopping-cart{
+  color: #26bbae;
+  font-size: 35px;
+  margin: 5px;
+}
+
 .fa-digital-ocean {
 	color: #26bbae;
 	font-size: 35px;
@@ -165,11 +171,6 @@ footer {
   display: flex;
 }
 
-/* .buy-zone .boton .btn{
-border-color:rgb(249,161,97) ;
-color:rgb(249,161,97) ;
-} */
-
 .prod-caja, .contItems{
    justify-content: center;
   align-items: center;
@@ -178,21 +179,7 @@ color:rgb(249,161,97) ;
   font-size: 25px;
   font-weight: bold;
 }
-/* boton SUBIR IMAGENES */
-/* .inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
-.inputfile + label, {
-    display: flex;
-    cursor: pointer;
-}
 
-*/
 .boton-show{
   margin: 0 80px;
   padding:0 30px;
@@ -213,14 +200,14 @@ color:rgb(249,161,97) ;
     width:36%;
     margin:1.5em 0;
   }
-  
+
   .actions .btn-info{
     float:left;
   }
   .actions .btn-danger{
     float:right;
   }
-  
+
   table#cart thead { display: none; }
   table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
   table#cart tbody tr td:first-child { background: #333; color: #fff; }
@@ -228,10 +215,10 @@ color:rgb(249,161,97) ;
     content: attr(data-th); font-weight: bold;
     display: inline-block; width: 8rem;
   }
-  
-  
-  
+
+
+
   table#cart tfoot td{display:block; }
   table#cart tfoot td .btn{display:block;}
-  
+
 }

@@ -25,8 +25,6 @@ class carrito
         ]));
       }
 
-
-
       return $next($request);
     }
 }

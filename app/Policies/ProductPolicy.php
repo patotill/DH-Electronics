@@ -39,9 +39,9 @@ class ProductPolicy
      * @param  \App\User  $user
      * @return mixed
      */
-    public function create(User $user)
+    public function create(User $user, Product $product)
     {
-        //
+        return $user->isAdmin();
     }
 
     /**
@@ -52,7 +52,7 @@ class ProductPolicy
      * @return mixed
      */
 
-    //Restriccion SOLO para administradores! 
+    //Restriccion SOLO para administradores!
     public function update(User $user, Product $product)
     {
         return $user->isAdmin();

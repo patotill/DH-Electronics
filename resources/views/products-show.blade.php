@@ -5,6 +5,7 @@
 @if(session('saved'))
 	<p class = 'alert alert-success text-center'>El producto ha sido editado correctamente</p>
 @endif
+
 <div class="col-md-12" style="margin-left: 10px" >
 <h3 class="text-left">{{ $productToShow->name }}</h3>
 </div>
@@ -36,8 +37,9 @@
 		</form>
 		@else
 			<a class="btn btn-outline-info" href="/add-to-cart/{{ $productToShow->id }}">Agregar al carrito</a>
-		@endif
 		@endauth
+		@endif
+
 		</div>
 	</div>
 
