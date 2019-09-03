@@ -27,16 +27,11 @@
         <div class="descripcion">
           <h4>Descripción</h4>
           <ul class="lista">
-          <li>Categoría: <h>{{ $product->category->name }}</h>
-          <li> Colores disponibles:
-              <ul>
-                <li> Blanco</li>
-                <li> Negro</li>
-              </ul>
-          </li>
-            <li>Capacidad: 64 GB</li>
-            <li>Tamaño: 5.6" con OLED display</li>
-            <li>12.2MP Rear Dual-Pixel Camera</li>
+          <li>Categoría: <h>{{ $product->category->name ?? 'Sin categoria'}}</h>
+            <li> Descripción y caracteristicas técnicas:</li>
+                <ul>
+                  <span itemprop="name">{{ $product->description }}</span>
+                </ul>
           </ul>
         </div>
       </div>

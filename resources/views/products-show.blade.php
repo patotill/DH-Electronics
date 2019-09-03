@@ -58,7 +58,11 @@
 </div>
 <br>
 <div class="col-md-12" style="margin-left: 10px" >
-	<p> {{ $productToShow->description}}</p>
+	<h4 class="font-weight-bold">DETALLE:</h3>
+	<p class="font-weight-bold">
+		{{ $productToShow->description}}
+	</p>
+
 
 </div>
 
