@@ -41,10 +41,27 @@
     	<label for="country">País de nacimiento</label>
 
         <select class="form-control @error('country') is-invalid @enderror" name="country" {{ old('country') }}>
-    			 <option value="">Elegí un país</option>
-    			 <option value="Argentina">Argentina</option>
-    			 <option value="Brasil">Brasil</option>
-    			 <option value="Colombia">Colombia</option>
+    			 <script type='text/javascript'>
+            
+            countriesField = document.querySelector ('select[name=country]');
+
+            fetch('http://dev.digitalhouse.com/api/getProvincias')
+              .then(response => response.json())
+              .then(data => {
+                   // Prints result from response.json() in getRequest
+               for(var i=0; i < data.length; i++){
+                    var option = document.createElement('option');
+                    var optionText = document.createTextNode(data[i].state);
+                    option.appendChild(optionText);
+                    console.log(option);
+                    countriesField.appendChild(option);
+                };
+                      
+              })
+              .catch(error => console.error(error))
+
+            
+          </script>
     	  </select>
     
 
@@ -75,4 +92,7 @@
 
  </form>
  </div>
+
 @endsection
+
+
