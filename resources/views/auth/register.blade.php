@@ -39,31 +39,9 @@
 
       <!-- PAIS DE NACIMIENTO -->
     	<label for="country">País de nacimiento</label>
-
-        <select class="form-control @error('country') is-invalid @enderror" name="country" {{ old('country') }}>
-    			 <script type='text/javascript'>
-            
-            countriesField = document.querySelector ('select[name=country]');
-
-            fetch('http://dev.digitalhouse.com/api/getProvincias')
-              .then(response => response.json())
-              .then(data => {
-                   // Prints result from response.json() in getRequest
-               for(var i=0; i < data.length; i++){
-                    var option = document.createElement('option');
-                    var optionText = document.createTextNode(data[i].state);
-                    option.appendChild(optionText);
-                    console.log(option);
-                    countriesField.appendChild(option);
-                };
-                      
-              })
-              .catch(error => console.error(error))
-
-            
-          </script>
-    	  </select>
-    
+      <select id = "country" class="form-control @error('country') is-invalid @enderror" name="country"></select>
+      <br>
+      <select id = 'state' class="form-control" name="state"></select>
 
     		@error('country')
     		<span class="invalid-feedback" role="alert">
@@ -92,7 +70,5 @@
 
  </form>
  </div>
-
+<script src="js/register.js"></script>
 @endsection
-
-

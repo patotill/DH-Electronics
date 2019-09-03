@@ -12,86 +12,30 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-      
+
 
 
 //MARCAS
 
         $brands = ['Apple', 'Sony', 'Xiaomi', 'Google', 'Microsoft', 'Nikon', 'Nintendo', 'Bose', 'Samsung', 'Lenovo', 'Asus', 'Dji', 'Ultimate Ears'];
-      
+
         foreach ($brands as $brand) {
           DB::table('brands')->insert(['name' => $brand]);
         }
 
-        /*DB::table('brands')->insert([
-        	'name'=> 'apple'
-        ]);
-        DB::table('brands')->insert([
-        	'name'=> 'sony'
-        ]);
-        DB::table('brands')->insert([
-        	'name'=> 'xiaomi'
-        ]);
-        DB::table('brands')->insert([
-        	'name'=> 'google'
-        ]);
-        DB::table('brands')->insert([
-          'name'=> 'microsoft'
-        ]);
-        DB::table('brands')->insert([
-          'name'=> 'nikon'
-        ]);
-        DB::table('brands')->insert([
-          'name'=> 'nintendo'
-        ]);
-        DB::table('brands')->insert([
-          'name'=> 'bose'
-        ]);
-        DB::table('brands')->insert([
-          'name'=> 'samsung'
-        ]);
-        DB::table('brands')->insert([
-          'name'=> 'lenovo'
-        ]);
-        DB::table('brands')->insert([
-          'name'=> 'asus'
-        ]);
-        DB::table('brands')->insert([
-          'name'=> 'dji'
-        ]);*/
 // CATEGORIAS
 
         $categories = ['foto', 'computadoras', 'audio', 'mobile', 'tv', 'accesorios'];
-      
+
         foreach ($categories as $categorie) {
           DB::table('categories')->insert(['name' => $categorie]);
         }
-
-        /*DB::table('categories')->insert([
-        	'name'=> 'foto'
-        ]);
-        DB::table('categories')->insert([
-        	'name'=> 'computadoras'
-        ]);
-        DB::table('categories')->insert([
-        	'name'=> 'audio'
-        ]);
-        DB::table('categories')->insert([
-        	'name'=> 'mobile'
-        ]);
-        DB::table('categories')->insert([
-        	'name'=> 'tv'
-        ]);
-        DB::table('categories')->insert([
-        	'name'=> 'accesorios'
-        ]);*/
-
-
+        
 // PRODUCTOS
 
         $storage = 'public/images/fotosDH/';
 
-        
+
 
         DB::table('products')->insert([
           'name'=> 'Nikon D7500 DSLR (solo cuerpo)',
@@ -203,7 +147,7 @@ class DatabaseSeeder extends Seeder
           'stock'=>'10',
           'brand_id'=>'13',
           'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
-          
+
         ]);
         DB::table('products')->insert([
           'name'=> 'Bose SoundLink Micro Bluetooth',

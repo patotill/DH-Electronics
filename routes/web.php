@@ -46,3 +46,17 @@ Route::group(['middleware' => 'usuarioAdmin'], function () {
     Route::get('/usuarioAdmin/series', 'Admin\SeriesController@index');
     Route::get('/usuarioAdmin/series/{id}', 'Admin\SeriesController@edit');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware('auth:api')->group( function(){
+
+  Route::get('/tasks', 'Api\TaskController@index')->name('api.tasks');
+
+  Route::post('/tasks', 'Api\TaskController@store')->name('api.tasks.store');
+
+  Route::post('/tasks/{id}/complete', 'Api\TaskController@complete')->name('api.tasks.complete');
+
+});
