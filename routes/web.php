@@ -36,6 +36,9 @@ Route::delete('cart/{id}', 'CartController@destroy')->middleware('carrito');
 Route::get('cart/edit/{id}', 'CartController@edit')->middleware('carrito');
 Route::post('cart/{id}', 'CartController@update')->middleware('carrito');
 
+Route::get('/final', function () {
+    return view('final');
+});
 
 Auth::routes();
 
