@@ -73,4 +73,20 @@ class RegisterController extends Controller
             'state' => $data['state']
         ]);
     }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+      $userToEdit = User::find($id);
+
+      $this->authorize('update', $userToEdit);
+
+      
+      return view('profile-edit-form', compact('userToEdit'));
+    }
 }

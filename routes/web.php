@@ -23,6 +23,10 @@ Route::delete('/products/destroy/{id}', 'ProductsController@destroy');
 Route::get('/products/edit/{id}', 'ProductsController@edit');
 Route::post('/products/{id}', 'ProductsController@update');
 
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/profile/edit/{id}', 'Auth\RegisterController@edit');
 
 Route::get('/faq', function () {
     return view('faq');
