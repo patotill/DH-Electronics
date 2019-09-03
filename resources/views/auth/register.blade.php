@@ -51,7 +51,7 @@
 
         <!-- PASSWORD -->
         <label for="password">Contraseña </label>
-        <input id="password" type="password" name="password" placeholder="debe contener 'DH' con un minimo de 8 caracteres" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+        <input id="password" type="password" name="password" placeholder="debe contener un minimo de 6 caracteres" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
         @error('password')
           <span class="invalid-feedback" role="alert">

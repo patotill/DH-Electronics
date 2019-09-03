@@ -9,7 +9,6 @@ var countriesField = document.querySelector ('select[name = country]');
      var opt = document.createElement('option');
      opt.innerHTML = data[country];
      countriesField.append(opt);
-
    };
  })
    .catch(function (error){
@@ -28,13 +27,16 @@ var stateField = document.querySelector ('select[name = state]');
      opt.value = i;
      opt.innerHTML = todaLaData.data[i].state;
      stateField.appendChild(opt);
+
    };
  })
    .catch(function (error){
      console.error(error);
  })
+
+ // opcion ver las provincias si soy de argentina !!
 stateField.style.visibility = "hidden";
-// opcion ver las provincias si soy de argentina !!
+
 countriesField.onchange = function (){
 
   if (this.value == "Argentina") {
