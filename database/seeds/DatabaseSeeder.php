@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
 
 // PRODUCTOS
 
-        $storage = 'public/images/fotosDH/';
+        $storage = '../public/images/fotosDH/';
 
 
         DB::table('products')->insert([

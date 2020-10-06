@@ -1,50 +1,53 @@
 var countriesField = document.querySelector ('select[name = country]');
 
- fetch('http://country.io/names.json')
+ fetch('https://restcountries.eu/rest/v2/region/americas?fields=name')
+    .then(function (response){
+      return response.json();
+    })
 
- .then(response => response.json())
-
- .then(function (data){
-   console.log(data)
-   for(country in data){
-     var opt = document.createElement('option');
-     opt.innerHTML = data[country];
-     countriesField.append(opt);
-   };
- })
+    .then(function (data){
+    //  console.log(data[0].name) //--> 57 paises de America
+      for(var i = 0; i < data.length; i++){
+        var opt = document.createElement('option');
+            opt.value = i;
+            opt.innerHTML = data[i].name;
+            countriesField.appendChild(opt);
+      };
+    })
    .catch(function (error){
      console.error(error);
- })
+   })
 
 
 var stateField = document.querySelector ('select[name = state]');
 
- fetch('http://dev.digitalhouse.com/api/getProvincias')
+ fetch('https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre')
+    .then(function(response){
+      return response.json();
+    })
 
- .then(response => response.json())
- .then(function (todaLaData){
-   console.log(todaLaData)
-   for (var i = 0; i < todaLaData.data.length; i++){
-     var opt = document.createElement('option');
-     opt.value = i;
-     opt.innerHTML = todaLaData.data[i].state;
-     stateField.appendChild(opt);
+    .then(function (todaLaData){
+      //console.log(todaLaData.provincias[3].nombre)
+      for (var i = 0; i < todaLaData.provincias.length; i++){
+         var opt = document.createElement('option');
+         opt.value = i;
+         opt.innerHTML = todaLaData.provincias[i].nombre;
+         stateField.appendChild(opt);
+      };
+    })
 
-   };
- })
    .catch(function (error){
      console.error(error);
- })
+   })
 
  // opcion ver las provincias si soy de argentina !!
-stateField.style.visibility = "hidden";
+stateField.style.display = 'none';
 
 countriesField.onchange = function (){
-
-  if (this.value == "Argentina") {
-    stateField.style.visibility = "visible";
-  }
-  else {
-    stateField.style.visibility = "hidden";
-  }
+  console.log(this.value);
+  if (this.value == "2") {
+   stateField.style.display = 'block';
+ } else {
+   stateField.style.display = 'none';
+ }
 };
