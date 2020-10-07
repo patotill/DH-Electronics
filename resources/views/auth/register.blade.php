@@ -42,7 +42,7 @@
 
       <select id = "country" class="form-control @error('country') is-invalid @enderror" name="country"></select>
       <br>
-      <select id = 'state' class="form-control" name="state"></select>
+      <select id = "state" class="form-control" name="state"></select>
 
         @error('country')
           <span class="invalid-feedback" role="alert">
@@ -76,5 +76,5 @@
  </form>
  </div>
 
-<script src="js/register.js"></script>
+<script src="/js/register.js"></script>
 @endsection
