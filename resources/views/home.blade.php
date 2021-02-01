@@ -60,7 +60,7 @@
 
 <!-- PRODUCTOS -->
 
-<div id="centerRegionContainer" class="centerRegionContainer ">
+<!-- <div id="centerRegionContainer" class="centerRegionContainer ">
 
 <div class="pro d-md-flex flex-md-equal my-md-3 pl-md-3">
 
@@ -131,7 +131,43 @@
   </div>
 </div>
 
-</div>
+</div> -->
+<section class = "products-container">
+  <article class="one-product">
+      <img src="/images/BoseSPeaker.jpeg"" alt="speaker" ></img>
+      <a class="btnProduct" href="{{ url('/categoria/3/audio') }}">Parlantes</a>
+  </article>
+  <article class="one-product">
+      <img src="/images/Fotografia.jpg"" alt="fotografia"></img>
+      <a class="btnProduct" href="{{ url('/categoria/1/fotografia') }}">Fotografia</a>
+  </article>
+  <article class="one-product">
+      <img src="/images/dron.jpg" alt="chicken"></img>
+      <a class="btnProduct" href="{{ url('/categoria/1/fotografia') }}">Drones & más</a>
+  </article>
+  <article class="one-product">
+      <img src="/images/iphone.jpeg"" alt="chicken"></img>
+      <a class="btnProduct" href="{{ url('/categoria/4/mobile') }}">Celulares</a>
+  </article>
+  <article class="one-product">
+      <img src="/images/nintendo.jpg"" alt="chicken"></img>
+      <a class="btnProduct" href="{{ url('/categoria/5/tv') }}">Gaming</a>
+  </article>
+  <article class="one-product">
+      <img src="/images/accesorios.jpeg"" alt="chicken"></img>
+      <a class="btnProduct" href="{{ url('/categoria/6/accesorios') }}">Accesorios</a>
+  </article>
+  <article class="one-product">
+      <img src="/images/fotosDH/lenovo.jpg"" alt="chicken"></img>   
+      <a class="btnProduct" href="{{ url('/categoria/2/computadoras') }}">Computadoras</a>
+  </article>
+  <article class="one-product">
+      <img src="/images/fotosDH/samsung_.jpg"" alt="chicken"></img>
+      <a class="btnProduct" href="{{ url('/categoria/5/tv') }}">Televisores</a>
+  </article>
+  
+</section>
+
 </main>
 
 
